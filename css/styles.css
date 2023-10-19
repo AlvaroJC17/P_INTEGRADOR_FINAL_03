@@ -9,9 +9,11 @@ nav{
     background-image: linear-gradient(to right, #d4af37, #724921);
 }
 
-header{
+.mapa{
     width: 100%;
-    height: 300px;
+margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .header1{
@@ -63,7 +65,7 @@ a{
     width: 70px;
     margin: 2px;
     height: 30px;
-    font-size: 13px; ;
+    font-size: 11px; ;
     border-style: none;
     background-color: transparent;
 }
@@ -94,6 +96,21 @@ a{
     border: #724921;
 }
 
+.iconos{
+    height: 30px;
+    margin: 0 5px 0 5px;
+}
+
+.tituloredes{
+    font-size: 13px;
+    margin: 5px 0 5px 0;
+}
+
+
+.redessocilaes{
+    font-size: 10px;
+}
+
 @media(max-width: 767px){
     .cabecera{
         display: flex;
@@ -108,6 +125,11 @@ a{
     .titulo2{
         font-size: 15px;
     }
+}
+
+footer{
+    background-image: linear-gradient(to right, #d4af37, #724921);
+    height: 300px;
 }
 
 @media (max-width: 400px){
@@ -147,4 +169,5 @@ a{
         font-size: 15px;
     }
 }
+
 
