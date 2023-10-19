@@ -6,18 +6,44 @@ html {
 }
 
 .cabecera{
+    display: flex;
+    align-items: center;
     justify-content: end;
-    margin-top: 10px;
 }
 
+.navbar4{
+    font-size: 13px;
+    margin: 0 auto;
+}
+
+.img-logo{
+    width: 10%;
+}
 
 .boton-modal{
-   min-width: 100px;
+    width: 80px;
     margin: 2px;
+    height: 30px;
+    font-size: 10px; ;
 }
 
 .bg-body-tertiary{
     background-color: white !important;
+}
+
+@media(max-width: 830px){
+    .navbar4{
+        font-size: 11px !important;
+       
+    }
+}
+
+@media(max-width: 767px){
+    .cabecera{
+        margin-top: 10px;
+        align-items: start !important;
+        justify-content: end !important;
+    }
 }
 
 @media (max-width: 400px){
