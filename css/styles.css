@@ -16,8 +16,8 @@ header{
 }
 
 .header1{
-    background-image: linear-gradient(to right, #d4af37, #724921);
-    color:#fbd24e;
+    background-image: linear-gradient(to bottom, #dfc2d7, #ca9cbc);
+    color:#eddde9;
 }
 
 
@@ -43,6 +43,7 @@ header{
 .navbar4{
     font-size: 13px;
     margin: 0 auto;
+    font-weight: bold;
     
 }
 
@@ -66,10 +67,19 @@ a{
     width: 70px;
     margin: 2px;
     height: 30px;
-    font-size: 11px; ;
+    font-size: 13px; ;
     border-style: none;
     background-color: transparent;
     
+}
+
+.boton-interno{
+    background-color: #c59b2d;
+    border-color: #c59b2d;
+}
+
+.boton-interno:hover{
+    background-image: linear-gradient(to bottom, #dfc2d7, #ca9cbc);
 }
 
 .bg-body-tertiary{
@@ -82,6 +92,13 @@ a{
        
     }
 }
+
+.modal-header, .modal-body, .modal-footer {
+
+    background-image: linear-gradient(to left, #c59b2d, #f4f0cd);
+    border: #724921;
+}
+
 
 
 @media(max-width: 767px){
