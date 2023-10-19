@@ -5,19 +5,42 @@ html {
     height: 100%;
 }
 
-.botones-logueo{
-    display: flex;
+.cabecera{
+    justify-content: end;
+    margin-top: 10px;
 }
-.login{
-    width: 100px;
-    border-radius: 30px;
-    margin-right: 5px;
-}
+
 
 .boton-modal{
-    width: 100px;
+   min-width: 100px;
     margin: 2px;
 }
-    
 
+.bg-body-tertiary{
+    background-color: white !important;
+}
+
+@media (max-width: 400px){
+    .boton-modal{
+        min-width: 80px;
+         margin: 2px;
+         font-size: 10px;
+     }
+
+     .col-6{
+        width: 100% !important;
+     }
+
+     .navbar2{
+        display: flex !important;
+        justify-content: center !important;}
+
+     .navbar4{text-align: center !important;}
+
+     .cabecera{
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        
+     }
+}
 
