@@ -3,7 +3,6 @@ html {
     margin: 0px;
     padding: 0px;
     height: 100%;
-    
 }
 
 nav{
@@ -19,7 +18,6 @@ header{
     background-image: linear-gradient(to bottom, #dfc2d7, #ca9cbc);
     color:#eddde9;
 }
-
 
 .titulo1{
     font-size: 120px !important;
@@ -43,8 +41,7 @@ header{
 .navbar4{
     font-size: 13px;
     margin: 0 auto;
-    font-weight: bold;
-    
+    font-weight: bold; 
 }
 
 a{
@@ -53,8 +50,7 @@ a{
 
 .img-logo{
     width: 80px;
-    background-color: #d4af37;
-   
+    background-color: #d4af37; 
 }
 
 .imagen-logo{
@@ -70,7 +66,6 @@ a{
     font-size: 13px; ;
     border-style: none;
     background-color: transparent;
-    
 }
 
 .boton-interno{
@@ -99,8 +94,6 @@ a{
     border: #724921;
 }
 
-
-
 @media(max-width: 767px){
     .cabecera{
         display: flex;
@@ -109,7 +102,7 @@ a{
         padding-top: 10px;
     }
     .titulo1{
-        font-size: 100px !important;
+        font-size: 90px !important;
     }
     
     .titulo2{
