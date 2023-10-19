@@ -1,0 +1,23 @@
+body,
+html {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+.botones-logueo{
+    display: flex;
+}
+.login{
+    width: 100px;
+    border-radius: 30px;
+    margin-right: 5px;
+}
+
+.boton-modal{
+    width: 100px;
+    margin: 2px;
+}
+    
+
+
