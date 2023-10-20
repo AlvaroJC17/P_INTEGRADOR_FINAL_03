@@ -24,18 +24,59 @@ nav{
 }
 
 .header1{
-    background-image: linear-gradient(to right, #d4af37, #724921);
+
+    background-image: url(../imagenes/istockphoto-968940310-1024x1024.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     color:#eddde9;
     padding-bottom: 5px;
+    height: 700px;
+    position: relative;
 }
 
+.contenedor-header{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.img-header-banner{
+    height: 150px;
+width: auto;
+border-radius: 50%;
+}
+
+
 .titulo1{
-    font-size: 120px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.contenido-header{
+    position: absolute;
+
+    left: 60px;
+    top: 60px;
+}
+
+.header-flex{
+    display: flex;
+}
+
+.h1estetica{
+    font-size: 60px
 }
 
 .titulo2{
-    font-size: 30px;
+    font-size: 20px;
+    position: absolute;
+    left: 250px;
+    top: 165px;
 }
+  
 
 .cabecera{
     display: flex;
@@ -61,6 +102,7 @@ a{
 .img-logo{
     width: 80px;
     background-color: #d4af37; 
+    border-radius: 50%;
 }
 
 .imagen-logo{
@@ -168,6 +210,14 @@ footer{
     
 }
 
+.img-cartas{
+    height: 176px;
+}
+
+.tarjeta2{
+    margin-left: auto;
+}
+
 @media(max-width: 850px){
     .navbar4{
         font-size: 11px !important;
@@ -182,12 +232,34 @@ footer{
         justify-content: end !important;
         padding-top: 10px;
     }
-    .titulo1{
-        font-size: 90px !important;
-    }
     
+    .h1estetica{
+        font-size: 40px
+    }
+}
+
+@media(max-width: 576px){
+    .header-flex{
+        display: block;
+    }
     .titulo2{
-        font-size: 15px;
+        font-size: 20px;
+        position: static;
+        text-align: center;
+    }
+    .img-header-banner{
+    height: 100px;
+    }
+
+    .contenido-header{
+        position: static;
+    }
+    .img-fondo-header{
+        text-align: center;
+        padding-top: 20px;
+    }
+    .h1estetica{
+        text-align: center;
     }
 }
 
