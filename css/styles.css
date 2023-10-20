@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,500;1,600;1,800&family=Mulish:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+
+
+
 body,
 html {
     margin: 0px;
     padding: 0px;
     height: 100%;
+   
 }
 
 nav{
@@ -11,12 +18,10 @@ nav{
 
 .mapa{
     width: 100%;
-margin: 0 auto;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
 }
-
-
 
 .header1{
     background-image: linear-gradient(to right, #d4af37, #724921);
@@ -79,7 +84,7 @@ a{
 }
 
 .boton-interno:hover{
-    background-image: linear-gradient(to bottom, #dfc2d7, #ca9cbc);
+    background-image: linear-gradient(to bottom, #f4f0cd, #ebdf9d);
 }
 
 .bg-body-tertiary{
@@ -88,13 +93,6 @@ a{
 
 .divfooter{
     border-left: #724921;
-}
-
-@media(max-width: 850px){
-    .navbar4{
-        font-size: 11px !important;
-       
-    }
 }
 
 .modal-header, .modal-body, .modal-footer {
@@ -111,7 +109,15 @@ a{
 .iconos2{
     display: flex;
     justify-content: space-around;
+    transition: all 0.3s; 
+    border-radius: 50%;
 }
+
+.iconos2:hover{
+    transform: scale(1.2); /* Ampliar el icono al 120% del tamaño original en hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agregar una sombra con desenfoque */
+}
+
 
 .iconos3{
     display: flex;
@@ -126,6 +132,47 @@ a{
 
 .redessocilaes{
     font-size: 10px;
+}
+
+.texto-label{
+    margin-bottom: 0px !important;
+}
+
+footer{
+    background-image: linear-gradient(to right, #d4af37, #724921);
+    width: 100%;
+    bottom: 0;
+    margin: 0px 0px 0px 0px !important;
+}
+
+.boton-flotante{
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    background-color: #25cc62;
+    bottom: 20px;
+    right: 30px;
+    color: ffff;
+    border-radius: 50%;
+    text-align: center;
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.500);
+    z-index: 999;
+}
+
+.fa-whatsapp{
+    font-size: 50px;
+    background-color: #25d366;
+    border-radius: 50%;
+    margin-top: 12px;
+    color: white;
+    
+}
+
+@media(max-width: 850px){
+    .navbar4{
+        font-size: 11px !important;
+       
+    }
 }
 
 @media(max-width: 767px){
@@ -144,12 +191,7 @@ a{
     }
 }
 
-footer{
-    background-image: linear-gradient(to right, #d4af37, #724921);
-    width: 100%;
-    bottom: 0;
-    margin: 0px 0px 0px 0px !important;
-}
+
 
 @media (max-width: 400px){
     .boton-modal{
