@@ -134,8 +134,15 @@ a{
 }
 
 .divfooter{
-    border-left: #724921;
+
+    border-right: 1px solid #724921;
+    padding-top: 10px;
 }
+
+.titulos-footer{
+    font-size: 30px;
+   }
+
 
 .modal-header, .modal-body, .modal-footer {
 
@@ -152,14 +159,13 @@ a{
     display: flex;
     justify-content: space-around;
     transition: all 0.3s; 
-    border-radius: 50%;
+    border-radius: 30%;
 }
 
 .iconos2:hover{
     transform: scale(1.2); /* Ampliar el icono al 120% del tamaño original en hover */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agregar una sombra con desenfoque */
 }
-
 
 .iconos3{
     display: flex;
@@ -234,6 +240,31 @@ main{
 h3{
     font-size: 100px;
     font-weight: 100;
+}
+
+.imagen-fija-fondo{
+    background-image: url(../imagenes/hermosa-naturaleza-retro-flores.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 420px;
+    color: white;
+
+}
+
+.img-main{
+    height: 200px;
+    margin: 10px;
+    
+}
+
+
+@media(max-width: 992px){
+
+   .titulos-footer{
+    font-size: 45px;
+   }
 }
 
 
@@ -333,6 +364,10 @@ h3{
     }
     h3{
         font-size: 30px;
+    }
+
+    .texto-img-fijas{
+    font-size: 15px;
     }
 }
 
