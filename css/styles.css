@@ -207,16 +207,35 @@ footer{
     border-radius: 50%;
     margin-top: 12px;
     color: white;
-    
 }
 
 .img-cartas{
-    height: 176px;
+    height: 200px;
+    width: auto;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.500);
 }
 
 .tarjeta2{
     margin-left: auto;
 }
+
+.tarjeta1, .tarjeta2{
+    background-color:  #f5eef3;
+}
+
+main{
+    background-color: #f5eef3;
+}
+
+.card-text{
+    text-align: justify;
+}
+
+h3{
+    font-size: 100px;
+    font-weight: 100;
+}
+
 
 @media(max-width: 850px){
     .navbar4{
@@ -235,6 +254,9 @@ footer{
     
     .h1estetica{
         font-size: 40px
+    }
+    h3{
+        font-size: 80px;
     }
 }
 
@@ -260,6 +282,14 @@ footer{
     }
     .h1estetica{
         text-align: center;
+    }
+    h3{
+        font-size: 50px;
+    }
+    .img-cartas{
+        height: auto;
+        width: 600px;
+        box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.500);
     }
 }
 
@@ -300,6 +330,9 @@ footer{
     
     .titulo2{
         font-size: 15px;
+    }
+    h3{
+        font-size: 30px;
     }
 }
 
