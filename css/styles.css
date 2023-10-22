@@ -1,3 +1,6 @@
+/*ESTILOS PARA EL HOME*/
+
+/*------------  NAV ---------------*/
 nav {
     /*Le da la iamgen degradada de fondo del menu principal*/
     background-image: linear-gradient(to right, #d4af37, #724921);
@@ -269,6 +272,30 @@ a {
     /* Aumenta el width del contedor donde se escribe el parrafo de las card*/
     margin-left: 15px;
     /*y le da un manrgen entre la imagen y el texto*/
+}
+
+.contenedor-logo-final{
+    /*estilos para el contenedor del logo que esta de ultimo en la pagina*/
+    text-align: center;
+    border-top: 1px solid;
+    margin-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.img-logo-final{
+    /*Estilos al ultimo logo del footer*/
+    border-radius: 50%;
+    width: 150px;
+}
+
+.diseñado{
+    /*Estilos para el ultimo div de la pagina donde sale el diseñado por*/
+    background-color: #c59b2d;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media(max-width: 992px) {
