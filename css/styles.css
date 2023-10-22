@@ -1,177 +1,183 @@
-
-body,
-html {
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
-   
-}
-
-nav{
+nav {
+    /*Le da la iamgen degradada de fondo del menu principal*/
     background-image: linear-gradient(to right, #d4af37, #724921);
 }
 
-.mapa{
-    width: 100%;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-}
-
-.header1{
-
+.header1 {
+    /*Agregra la imagen de fonde el header*/
     background-image: url(../imagenes/istockphoto-968940310-1024x1024.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    color:#eddde9;
+    color: #eddde9;
     padding-bottom: 5px;
     height: 700px;
     position: relative;
 }
 
-.contenedor-header{
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.img-header-banner{
+.img-header-banner {
+    /*Le da estilos al logo principal*/
     height: 150px;
-width: auto;
-border-radius: 50%;
+    width: auto;
+    border-radius: 50%;
 }
 
-
-.titulo1{
+.titulo1 {
+    /*Centre el titulo principal (H1) y le da un margen izquierdo con respecto al logo principal*/
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 10px;
 }
 
-.contenido-header{
+.contenido-header {
+    /*Es el div donde esta el logo principal y el titulo principal juntos, se encarga de posicionar a ambos donde estan con respecto al contenedor header*/
     position: absolute;
-
     left: 60px;
     top: 60px;
 }
 
-.header-flex{
+.header-flex {
+    /*Posciona el logo principal al lado del titulo principal! NO BORRAR! */
     display: flex;
 }
 
-.h1estetica{
+.h1estetica {
+    /*Tamaño de letra al titulo principal del header*/
     font-size: 60px
 }
 
-.titulo2{
+.titulo2 {
+    /*Posiciona el segundo texto (el mas pequeño) de la imagen del header en ese posicion debajo del titulo*/
     font-size: 20px;
     position: absolute;
     left: 250px;
     top: 165px;
 }
-  
 
-.cabecera{
+.cabecera {
+    /*Posiciona los botones de login y registrase en el menu princial al centro y a la derecha y les da color*/
     display: flex;
     align-items: center;
     justify-content: end;
     background-image: linear-gradient(to left, #d4af37, #724921);
 }
 
-.navbar4{ /*Le da estilos a la lista del menu, tamaño de letra, centrado y grosor de letra*/
+.navbar4 {
+    /*Le da estilos a la lista del menu, tamaño de letra, centrado y grosor de letra*/
     font-size: 13px;
     margin: 0 auto;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
-.img-logo{ /*Le da estilos al logo pequeño del menu*/
+.img-logo {
+    /*Le da estilos al logo pequeño del menu*/
     width: 80px;
-    background-color: #d4af37; 
+    background-color: #d4af37;
     border-radius: 50%;
 }
 
-.imagen-logo{ /*Centra la imagen pequeña del logo del menu cuando esta en el tamaño mas pequeño de pantalla*/
+.imagen-logo {
+    /*Centra la imagen pequeña del logo del menu cuando esta en el tamaño mas pequeño de pantalla*/
     display: flex;
     align-items: center;
     justify-content: start;
 }
 
-.boton-modal{ /*Le da estilos a los botones de login y registrase del menu principal, en este tambien les pone fondo transparente*/
+.boton-modal {
+    /*Le da estilos a los botones de login y registrase del menu principal, en este tambien les pone fondo transparente*/
     width: 70px;
     margin: 2px;
     height: 30px;
-    font-size: 11px; ;
-    color:  #78340f !important;
+    font-size: 11px;
+    ;
+    color: #78340f !important;
     border-style: none;
     background-color: transparent;
 }
 
-.boton-interno{ /*Le asigna color a los botones dentro de las ventanas de login y registrarse*/
+.boton-interno {
+    /*Le asigna color a los botones dentro de las ventanas de login y registrarse*/
     background-color: #c59b2d !important;
     border-color: #c59b2d !important;
 }
 
-.boton-interno:hover{ /*Hace la transicion de color al pasar el mouse arriba de los botones dentro de las ventas de login y registrarse*/
+.boton-interno:hover {
+    /*Hace la transicion de color al pasar el mouse arriba de los botones dentro de las ventas de login y registrarse*/
     background-image: linear-gradient(to bottom, #f4f0cd, #ebdf9d);
 }
 
-.bg-body-tertiary{ /*No se que hace, pero al borrarlo, me saltan unas advertencias en la consola del navegador*/
+.bg-body-tertiary {
+    /*No se que hace, pero al borrarlo, me saltan unas advertencias en la consola del navegador*/
     background-color: white !important;
 }
 
-.divfooter{ /*Le da estilos a las colummnas del footer, en este caso, la raya de separacion y una separacion arriba*/
+.divfooter {
+    /*Le da estilos a las colummnas del footer, en este caso, la raya de separacion y una separacion arriba*/
     border-right: 1px solid #724921;
     padding-top: 10px;
 }
 
-.titulos-footer{ /*Le da tamaños a los titulos de que estan en el footer*/
+.titulos-footer {
+    /*Le da tamaños a los titulos de que estan en el footer*/
     font-size: 30px;
-   }
+}
 
-.modal-header, .modal-body, .modal-footer { /*Le camabia el color de fondo y le coloca bordes al las ventanas de login y registrarse*/
+.modal-header,
+.modal-body,
+.modal-footer {
+    /*Le camabia el color de fondo y le coloca bordes al las ventanas de login y registrarse*/
     background-image: linear-gradient(to left, #c59b2d, #f4f0cd);
     border: #724921;
 }
 
-.iconos{ /*Le da el tamaño a todos los iconos pequeños tanto al principio de la pagina como al footer*/
+.iconos {
+    /*Le da el tamaño a todos los iconos pequeños tanto al principio de la pagina como al footer*/
     height: 30px;
     margin: 0;
 }
 
-.iconos2{ /*Le da la transcision de aumento y bordes a los iconos de redes sociales del footer*/
-    transition: all 0.3s; 
+.iconos2 {
+    /*Le da la transcision de aumento y bordes a los iconos de redes sociales del footer*/
+    transition: all 0.3s;
     border-radius: 30%;
 }
 
-.iconos2:hover{ /*crea la interaccion al pasar el mouse sobre el icono y le crea una sombra*/
-    transform: scale(1.2); /* Ampliar el icono al 120% del tamaño original en hover */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agregar una sombra con desenfoque */
+.iconos2:hover {
+    /*crea la interaccion al pasar el mouse sobre el icono y le crea una sombra*/
+    transform: scale(1.2);
+    /* Ampliar el icono al 120% del tamaño original en hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Agregar una sombra con desenfoque */
 }
 
-.iconos3{ /*Ajusta los iconos del princio de la pagina y del footer uno al lado del otro y los separa entre si*/
+.iconos3 {
+    /*Ajusta los iconos del princio de la pagina y del footer uno al lado del otro y los separa entre si*/
     display: flex;
     justify-content: space-around;
 }
 
-.tituloredes{ /*Le da estilos al titulo que esta al princio de la pagina, al lado de los iconos de redes sociales*/
+.tituloredes {
+    /*Le da estilos al titulo que esta al princio de la pagina, al lado de los iconos de redes sociales*/
     font-size: 13px;
     margin: 5px 0 5px 0;
 }
 
-.texto-label{/*Le da estilo a los texto arriba de los imput en la parte de comentarios del footer, en este caso pega el texto de la barra del imput*/
+.texto-label {
+    /*Le da estilo a los texto arriba de los imput en la parte de comentarios del footer, en este caso pega el texto de la barra del imput*/
     margin-bottom: 0px !important;
 }
 
-footer{ /*Le da el color degradado al footer, el ancho y los maregenes*/
+footer {
+    /*Le da el color degradado al footer, el ancho y los maregenes*/
     background-image: linear-gradient(to right, #d4af37, #724921);
     width: 100%;
     bottom: 0;
     margin: 0px 0px 0px 0px !important;
 }
 
-.boton-flotante{ /*Le da los estilos al contenedor del logo de ws flotante*/
+.boton-flotante {
+    /*Le da los estilos al contenedor del logo de ws flotante*/
     position: fixed;
     width: 75px;
     height: 75px;
@@ -181,11 +187,12 @@ footer{ /*Le da el color degradado al footer, el ancho y los maregenes*/
     color: ffff;
     border-radius: 50%;
     text-align: center;
-  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.500);
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.500);
     z-index: 999;
 }
 
-.fa-whatsapp{ /* Le da diseño al logo de ws flotante, el logo de importo de una pagina*/
+.fa-whatsapp {
+    /* Le da diseño al logo de ws flotante, el logo de importo de una pagina*/
     font-size: 50px;
     background-color: #25d366;
     border-radius: 50%;
@@ -193,44 +200,49 @@ footer{ /*Le da el color degradado al footer, el ancho y los maregenes*/
     color: white;
 }
 
-.tarjeta2{ /*Pega las card 2 y 4 a la izquierda de la pagina*/
+.tarjeta2 {
+    /*Pega las card 2 y 4 a la izquierda de la pagina*/
     margin-left: auto;
 }
 
-main{ /*Le asigno un color de fondo a todo el main*/
+main {
+    /*Le asigno un color de fondo a todo el main*/
     background-color: #f5eef3;
 }
 
 
-h3{ /*Le asigna por defecto un tamaño de letra y un grosor a los titulos H3*/
+h3 {
+    /*Le asigna por defecto un tamaño de letra y un grosor a los titulos H3*/
     font-size: 80px;
     font-weight: 100;
 }
 
-.imagen-fija-fondo{ /*Es la image fija que no se mueve con el scroll, la opcion fixed es la que la hace fija*/
+.imagen-fija-fondo {
+    /*Es la image fija que no se mueve con el scroll, la opcion fixed es la que la hace fija*/
     background-image: url(../imagenes/hermosa-naturaleza-retro-flores.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     height: 420px;
-    color: white; /*le da color al texto que esta encima de la imagen*/
-
+    color: white;
+    /*le da color al texto que esta encima de la imagen*/
 }
 
-a{ /* Para cambiar el color y quitar la decoracion de los todos los link de la pagina*/
-    color: #78340f!important;
+a {
+    /* Para cambiar el color y quitar la decoracion de los todos los link de la pagina*/
+    color: #78340f !important;
     text-decoration: none;
 }
 
-.img-main{ /* le da uncho al contedor de las 9 imagenes del main y un margen entre ellas*/
+.img-main {
+    /* le da uncho al contedor de las 9 imagenes del main y un margen entre ellas*/
     width: 300px;
     margin: 15px;
 }
-    
-    
 
-.img-main-tarjetas{ /*Inserta la imagen en la ultimas 9 tarjetas y le da estilos de tamaño y borde*/
+.img-main-tarjetas {
+    /*Inserta la imagen en la ultimas 9 tarjetas y le da estilos de tamaño y borde*/
     background-image: url(../imagenes/hermosa-naturaleza-retro-campo-lavanda.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -239,162 +251,209 @@ a{ /* Para cambiar el color y quitar la decoracion de los todos los link de la p
     border-radius: 2%;
 }
 
-.tarjetas-centrales{ /*este contendor se encarga de colocar la imagen de las card a la izquierda y el texto a la derecha*/
+.tarjetas-centrales {
+    /*este contendor se encarga de colocar la imagen de las card a la izquierda y el texto a la derecha*/
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
-.texto-tarjetas-main{ /*tamaño de letra para los titulos de las ultimas 9 imagenes*/
+.texto-tarjetas-main {
+    /*tamaño de letra para los titulos de las ultimas 9 imagenes*/
     font-size: 30px;
 }
 
-.div-parrafos{
-    width: 25%;   /* Aumenta el width del contedor donde se escribe el parrafo de las card*/
-    margin-left: 15px; /*y le da un manrgen entre la imagen y el texto*/
+.div-parrafos {
+    width: 25%;
+    /* Aumenta el width del contedor donde se escribe el parrafo de las card*/
+    margin-left: 15px;
+    /*y le da un manrgen entre la imagen y el texto*/
 }
 
-@media(max-width: 992px){
+@media(max-width: 992px) {
+    .titulos-footer {
+        /*Le da tamaños a los titulos de que estan en el footer*/
+        font-size: 45px;
+    }
 
-   .titulos-footer{
-    font-size: 45px;
-   }
-   h3{
-    font-size: 60px;
-    font-weight: 100;
-}
-.parrafos-main{ /*disminuye el tamaño de la letra de los parrafos de las card*/
-    font-size: 10px;
-}
-}
+    h3 {
+        /*Disminuyr el tamaño de la letra h3 y le da grosor*/
+        font-size: 60px;
+        font-weight: 100;
+    }
 
-
-@media(max-width: 850px){
-    .navbar4{ /*Le da estilos a la lista del menu, tamaño de letra, centrado y grosor de letra*/
-        font-size: 11px !important;
-       
+    .parrafos-main {
+        /*disminuye el tamaño de la letra de los parrafos de las card*/
+        font-size: 10px;
     }
 }
 
-@media(max-width: 767px){
-    .cabecera{
-        display: flex;
+@media(max-width: 850px) {
+    .navbar4 {
+        /*Le da estilos a la lista del menu, tamaño de letra, centrado y grosor de letra*/
+        font-size: 11px !important;
+    }
+}
+
+@media(max-width: 767px) {
+    .cabecera {
+        /*Posiciona los botones de login y registrase en el menu princial aarriba y a la derecha*/
         align-items: start !important;
         justify-content: end !important;
         padding-top: 10px;
     }
-    
-    .h1estetica{
+
+    .h1estetica {
+        /*Tamaño de letra al titulo principal del header*/
         font-size: 40px
     }
-    h3{
+
+    h3 {
+        /*disminuye el tamaño del texto h3 en este tamaño de pantalla*/
         font-size: 50px;
     }
 
-    .tarjeta2, .tarjeta1{  /*disminuye el tamano de la imagen de las card para esta media*/
+    .tarjeta2,
+    .tarjeta1 {
+        /*disminuye el tamano de la imagen de las card para esta media*/
         width: 30rem !important;
         margin: 0 auto;
     }
 
-    .tarjetas-centrales{ /* para esta media pasa el texto debajo de las card*/
+    .tarjetas-centrales {
+        /* para esta media pasa el texto debajo de las card*/
         display: block;
         width: 100% !important;
         justify-content: center;
         align-items: center;
-        
     }
 
-    .div-parrafos{
-        width: 100%;     /* Aumenta este tamaño el contenedor donde va el texto de las card en el main*/
+    .div-parrafos {
+        width: 100%;
+        /* Aumenta este tamaño el contenedor donde va el texto de las card en el main*/
         margin-left: 0px;
     }
 
-    .tarjeta1{
-        margin: 0 auto; /*cetra las card del main para este tamaño del media*/
+    .tarjeta1 {
+        margin: 0 auto;
+        /*cetra las card del main para este tamaño del media*/
     }
-
 }
 
-@media(max-width: 576px){
-    .header-flex{
+@media(max-width: 576px) {
+    .header-flex {
+        /*Posciona el logo principal encima del titulo principal para este tamaño de pantalla! NO BORRAR! */
         display: block;
     }
-    .titulo2{
+
+    .titulo2 {
+        /*Posiciona el segundo texto (el mas pequeño) de la imagen del header en ese posicion debajo del titulo, ademas de bajarle el tamaño de la letra, y quitarle el posicion absolute y centrarlo*/
         font-size: 20px;
         position: static;
         text-align: center;
     }
-    .img-header-banner{
-    height: 100px;
+
+    .img-header-banner {
+        /*Le da estilos al logo principal, en este caso aumenta el tamaño del logo para este tamaño de pantalla*/
+        height: 100px;
     }
 
-    .contenido-header{
+    .contenido-header {
+        /*Es el div donde esta el logo principal y el titulo principal juntos, en este caso les quita la propiedad absolute para que sea un contendor normal y se puedan colocar los elementos uno debajo del otro */
         position: static;
     }
-    .img-fondo-header{
+
+    .img-fondo-header {
+        /*Centra el logo principal del header en este tamaño de pantalla*/
         text-align: center;
         padding-top: 20px;
     }
-    .h1estetica{
+
+    .h1estetica {
+        /*Centra el titulo principal del header*/
         text-align: center;
     }
-    h3{
+
+    h3 {
+        /*tamaño de letra de los h3 para este tamaño de pantalla*/
         font-size: 30px;
     }
-  
-    .tarjeta2, .tarjeta1{
+
+    .tarjeta2,
+    .tarjeta1 {
+        /*disminuye el tamano de la imagen de las card para esta media*/
         width: 21rem !important;
     }
 }
 
-
-@media (max-width: 400px){
-    .boton-modal{
+@media (max-width: 400px) {
+    .boton-modal {
+        /*Le da estilos a los botones de login y registrase del menu principal, en este tambien les pone fondo transparente*/
         min-width: 80px;
-         margin: 2px;
-         font-size: 10px;
-     }
+        margin: 2px;
+        font-size: 10px;
+    }
 
-    .navbar4{text-align: center !important;} /*Le da estilos a la lista del menu, tamaño de letra, centrado y grosor de letra, en este caso tambien centra el texto*/
+    .navbar4 {
+        /*Centra el texto del menu principal para este tamaño de pantalla*/
+        text-align: center !important;
+    }
 
-     .col-6{
+    /*Le da estilos a la lista del menu, tamaño de letra, centrado y grosor de letra, en este caso tambien centra el texto*/
+
+    .navbar1 {
+        /*Afecta a los botones de login y registrarse*/
         width: 100% !important;
-     }
+    }
 
-     .imagen-logo{ /*Centra la imagen pequeña del logo cuando esta en el tamaño mas pequeño de pantalla*/
+    .imagen-logo {
+        /*Centra la imagen pequeña del logo cuando esta en el tamaño mas pequeño de pantalla*/
         display: flex;
         align-items: center;
         justify-content: center;
         margin-left: 0px;
     }
 
-     .navbar2{
+    .navbar2 {
+        /*Coloca los elementos del menu principal uno debajo del otro y los centra para este tamaño de pantalla*/
         display: flex !important;
-        justify-content: center !important;}
+        justify-content: center !important;
+    }
 
-     .cabecera{
+    .cabecera {
+        /*Posiciona los botones de login y registrase en el menu princial al centro*/
         justify-content: center !important;
         flex-wrap: wrap !important;
-        
-     }
-     .titulo1{
+    }
+
+    .titulo1 {
+        /*Centre el titulo principal (H1) y le da un margen izquierdo con respecto al logo principal, y disminuye el tamaño de la letra*/
+
         font-size: 50px !important;
     }
-    
-    .titulo2{
+
+    .titulo2 {
+        /*Posiciona el segundo texto (el mas pequeño) de la imagen del header en ese posicion debajo del titulo, ademas de bajarle el tamaño a la letra*/
+
         font-size: 15px;
     }
-    h3{
+
+    h3 {
+        /*disminuye el tamaño de letra de los h3 para esta medida de pantalla*/
+
         font-size: 30px;
     }
 
-    .texto-img-fijas{
-    font-size: 12px;
+    .texto-img-fijas {
+        /*Disminuye la letra de los titulos de las imagenes fijas que no se mueven con el scroll*/
+
+        font-size: 12px;
     }
-    .tarjeta2, .tarjeta1{
+
+    .tarjeta2,
+    .tarjeta1 {
+        /*disminuye el tamano de la imagen de las card para esta media*/
         width: 15rem !important;
     }
 }
-
-
