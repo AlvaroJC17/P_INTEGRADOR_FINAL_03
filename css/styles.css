@@ -1,61 +1,84 @@
-/*ESTILOS PARA EL HOME*/
+h3 {
+    /*Le asigna por defecto un tamaño de letra y un grosor a los titulos H3*/
+    font-size: 80px;
+    font-weight: 100;
+}
+
+a {
+    /* Para cambiar el color y quitar la decoracion de los todos los link de la pagina*/
+    color: #78340f !important;
+    text-decoration: none;
+}
+
+
+/*-------- BOTON WS ---------*/
+
+.boton-flotante {
+    /*Le da los estilos al contenedor del logo de ws flotante*/
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    background-color: #25cc62;
+    bottom: 20px;
+    right: 30px;
+    color: ffff;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.500);
+    z-index: 999;
+}
+
+.boton-flotante:hover{
+    /*hoover para el fonde del boton de ws*/
+    background-color: #2ae06d;
+}
+
+.fa-whatsapp {
+    /* Le da diseño al logo de ws flotante, el logo de importo de una pagina*/
+    font-size: 50px;
+    background-color: #25d366;
+    border-radius: 50%;
+    margin-top: 12px;
+    color: white;
+}
 
 /*------------  NAV ---------------*/
+
 nav {
     /*Le da la iamgen degradada de fondo del menu principal*/
     background-image: linear-gradient(to right, #d4af37, #724921);
 }
 
-.header1 {
-    /*Agregra la imagen de fonde el header*/
-    background-image: url(../imagenes/istockphoto-968940310-1024x1024.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    color: #eddde9;
-    padding-bottom: 5px;
-    height: 700px;
-    position: relative;
+.tituloredes {
+    /*Le da estilos al titulo que esta al princio de la pagina, al lado de los iconos de redes sociales*/
+    font-size: 13px;
+    margin: 5px 0 5px 0;
 }
 
-.img-header-banner {
-    /*Le da estilos al logo principal*/
-    height: 150px;
-    width: auto;
+.iconos3 {
+    /*Ajusta los iconos del princio de la pagina y del footer uno al lado del otro y los separa entre si*/
+    display: flex;
+    justify-content: space-around;
+}
+
+.iconos {
+    /*Le da el tamaño a todos los iconos pequeños tanto al principio de la pagina como al footer*/
+    height: 30px;
+    margin: 0;
+}
+
+.img-logo {
+    /*Le da estilos al logo pequeño del menu*/
+    width: 80px;
+    background-color: #d4af37;
     border-radius: 50%;
 }
 
-.titulo1 {
-    /*Centre el titulo principal (H1) y le da un margen izquierdo con respecto al logo principal*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
-}
-
-.contenido-header {
-    /*Es el div donde esta el logo principal y el titulo principal juntos, se encarga de posicionar a ambos donde estan con respecto al contenedor header*/
-    position: absolute;
-    left: 60px;
-    top: 60px;
-}
-
-.header-flex {
-    /*Posciona el logo principal al lado del titulo principal! NO BORRAR! */
-    display: flex;
-}
-
-.h1estetica {
-    /*Tamaño de letra al titulo principal del header*/
-    font-size: 60px
-}
-
-.titulo2 {
-    /*Posiciona el segundo texto (el mas pequeño) de la imagen del header en ese posicion debajo del titulo*/
-    font-size: 20px;
-    position: absolute;
-    left: 250px;
-    top: 165px;
+.navbar4 {
+    /*Le da estilos a la lista del menu, tamaño de letra, centrado y grosor de letra*/
+    font-size: 13px;
+    margin: 0 auto;
+    font-weight: bold;
 }
 
 .cabecera {
@@ -66,20 +89,10 @@ nav {
     background-image: linear-gradient(to left, #d4af37, #724921);
 }
 
-.navbar4 {
-    /*Le da estilos a la lista del menu, tamaño de letra, centrado y grosor de letra*/
-    font-size: 13px;
-    margin: 0 auto;
-    font-weight: bold;
+.texto-label {
+    /*Le da estilo a los texto arriba de los imput en la parte de comentarios del footer, en este caso pega el texto de la barra del imput*/
+    margin-bottom: 0px !important;
 }
-
-.img-logo {
-    /*Le da estilos al logo pequeño del menu*/
-    width: 80px;
-    background-color: #d4af37;
-    border-radius: 50%;
-}
-
 .imagen-logo {
     /*Centra la imagen pequeña del logo del menu cuando esta en el tamaño mas pequeño de pantalla*/
     display: flex;
@@ -115,17 +128,6 @@ nav {
     background-color: white !important;
 }
 
-.divfooter {
-    /*Le da estilos a las colummnas del footer, en este caso, la raya de separacion y una separacion arriba*/
-    border-right: 1px solid #724921;
-    padding-top: 10px;
-}
-
-.titulos-footer {
-    /*Le da tamaños a los titulos de que estan en el footer*/
-    font-size: 30px;
-}
-
 .modal-header,
 .modal-body,
 .modal-footer {
@@ -134,90 +136,65 @@ nav {
     border: #724921;
 }
 
-.iconos {
-    /*Le da el tamaño a todos los iconos pequeños tanto al principio de la pagina como al footer*/
-    height: 30px;
-    margin: 0;
+/*------ HEADER --------*/
+
+.header1 {
+    /*Agregra la imagen de fonde el header*/
+    background-image: url(../imagenes/istockphoto-968940310-1024x1024.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #eddde9;
+    padding-bottom: 5px;
+    height: 700px;
+    position: relative;
 }
 
-.iconos2 {
-    /*Le da la transcision de aumento y bordes a los iconos de redes sociales del footer*/
-    transition: all 0.3s;
-    border-radius: 30%;
+.contenido-header {
+    /*Es el div donde esta el logo principal y el titulo principal juntos, se encarga de posicionar a ambos donde estan con respecto al contenedor header*/
+    position: absolute;
+    left: 60px;
+    top: 60px;
 }
 
-.iconos2:hover {
-    /*crea la interaccion al pasar el mouse sobre el icono y le crea una sombra*/
-    transform: scale(1.2);
-    /* Ampliar el icono al 120% del tamaño original en hover */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    /* Agregar una sombra con desenfoque */
-}
-
-.iconos3 {
-    /*Ajusta los iconos del princio de la pagina y del footer uno al lado del otro y los separa entre si*/
+.header-flex {
+    /*Posciona el logo principal al lado del titulo principal! NO BORRAR! */
     display: flex;
-    justify-content: space-around;
 }
 
-.tituloredes {
-    /*Le da estilos al titulo que esta al princio de la pagina, al lado de los iconos de redes sociales*/
-    font-size: 13px;
-    margin: 5px 0 5px 0;
-}
-
-.texto-label {
-    /*Le da estilo a los texto arriba de los imput en la parte de comentarios del footer, en este caso pega el texto de la barra del imput*/
-    margin-bottom: 0px !important;
-}
-
-footer {
-    /*Le da el color degradado al footer, el ancho y los maregenes*/
-    background-image: linear-gradient(to right, #d4af37, #724921);
-    width: 100%;
-    bottom: 0;
-    margin: 0px 0px 0px 0px !important;
-}
-
-.boton-flotante {
-    /*Le da los estilos al contenedor del logo de ws flotante*/
-    position: fixed;
-    width: 75px;
-    height: 75px;
-    background-color: #25cc62;
-    bottom: 20px;
-    right: 30px;
-    color: ffff;
+.img-header-banner {
+    /*Le da estilos al logo principal*/
+    height: 150px;
+    width: auto;
     border-radius: 50%;
-    text-align: center;
-    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.500);
-    z-index: 999;
 }
 
-.fa-whatsapp {
-    /* Le da diseño al logo de ws flotante, el logo de importo de una pagina*/
-    font-size: 50px;
-    background-color: #25d366;
-    border-radius: 50%;
-    margin-top: 12px;
-    color: white;
+.titulo1 {
+    /*Centre el titulo principal (H1) y le da un margen izquierdo con respecto al logo principal*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
 }
 
-.tarjeta2 {
-    /*Pega las card 2 y 4 a la izquierda de la pagina*/
-    margin-left: auto;
+
+.h1estetica {
+    /*Tamaño de letra al titulo principal del header*/
+    font-size: 60px
 }
 
+.titulo2 {
+    /*Posiciona el segundo texto (el mas pequeño) de la imagen del header en ese posicion debajo del titulo*/
+    font-size: 20px;
+    position: absolute;
+    left: 250px;
+    top: 165px;
+}
+
+/*---------- MAIN ----------*/
 main {
     /*Le asigno un color de fondo a todo el main*/
     background-color: #f5eef3;
-}
-
-
-h3 {
-    /*Le asigna por defecto un tamaño de letra y un grosor a los titulos H3*/
-    font-size: 80px;
-    font-weight: 100;
 }
 
 .imagen-fija-fondo {
@@ -232,16 +209,24 @@ h3 {
     /*le da color al texto que esta encima de la imagen*/
 }
 
-a {
-    /* Para cambiar el color y quitar la decoracion de los todos los link de la pagina*/
-    color: #78340f !important;
-    text-decoration: none;
+.tarjetas-centrales {
+    /*este contendor se encarga de colocar la imagen de las card a la izquierda y el texto a la derecha*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
-.img-main {
-    /* le da uncho al contedor de las 9 imagenes del main y un margen entre ellas*/
-    width: 300px;
-    margin: 15px;
+.div-parrafos {
+    width: 25%;
+    /* Aumenta el width del contedor donde se escribe el parrafo de las card*/
+    margin-left: 15px;
+    /*y le da un manrgen entre la imagen y el texto*/
+}
+
+.tarjeta2 {
+    /*Pega las card 2 y 4 a la izquierda de la pagina*/
+    margin-left: auto;
 }
 
 .img-main-tarjetas {
@@ -254,24 +239,48 @@ a {
     border-radius: 2%;
 }
 
-.tarjetas-centrales {
-    /*este contendor se encarga de colocar la imagen de las card a la izquierda y el texto a la derecha*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
 .texto-tarjetas-main {
     /*tamaño de letra para los titulos de las ultimas 9 imagenes*/
     font-size: 30px;
 }
 
-.div-parrafos {
-    width: 25%;
-    /* Aumenta el width del contedor donde se escribe el parrafo de las card*/
-    margin-left: 15px;
-    /*y le da un manrgen entre la imagen y el texto*/
+.img-main {
+    /* le da uncho al contedor de las 9 imagenes del main y un margen entre ellas*/
+    width: 300px;
+    margin: 15px;
+}
+
+/*---------- FOOTER ----------*/
+footer {
+    /*Le da el color degradado al footer, el ancho y los maregenes*/
+    background-image: linear-gradient(to right, #d4af37, #724921);
+    width: 100%;
+    bottom: 0;
+    margin: 0px 0px 0px 0px !important;
+}
+.divfooter {
+    /*Le da estilos a las colummnas del footer, en este caso, la raya de separacion y una separacion arriba*/
+    border-right: 1px solid #724921;
+    padding-top: 10px;
+}
+
+.titulos-footer {
+    /*Le da tamaños a los titulos de que estan en el footer*/
+    font-size: 30px;
+}
+
+.iconos2 {
+    /*Le da la transcision de aumento y bordes a los iconos de redes sociales del footer*/
+    transition: all 0.3s;
+    border-radius: 30%;
+}
+
+.iconos2:hover {
+    /*crea la interaccion al pasar el mouse sobre el icono y le crea una sombra*/
+    transform: scale(1.2);
+    /* Ampliar el icono al 120% del tamaño original en hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Agregar una sombra con desenfoque */
 }
 
 .contenedor-logo-final{
@@ -297,6 +306,8 @@ a {
     align-items: center;
     justify-content: center;
 }
+
+/*-------- MEDIAS PARA RESPONSIVE ---------*/
 
 @media(max-width: 992px) {
     .titulos-footer {
