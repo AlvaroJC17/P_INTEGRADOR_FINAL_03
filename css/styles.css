@@ -307,6 +307,63 @@ footer {
     justify-content: center;
 }
 
+/*PAGINA DE USUARIOS REGISTRADOS*/
+
+/*---- HOME - NAV -----*/
+
+.row{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.main-home{
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.img-logo-nav {
+    /*Le da estilos al logo pequeño del menu*/
+    width: 50px;
+    background-color: #d4af37;
+    border-radius: 50%;
+}
+
+.ft{
+    height: 180px;
+    width: 360px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 30px;
+    background-color: #ebdf9d;
+}
+
+.container{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
+ padding: 0px !important;
+
+}
+
+.texto-tarjetas-main-home{
+    margin-bottom: 0px !important;
+}
+
+.hover:hover{
+    color: #c59b2d;
+}
+
+
+
+
+
+
 /*-------- MEDIAS PARA RESPONSIVE ---------*/
 
 @media(max-width: 992px) {
@@ -325,6 +382,10 @@ footer {
         /*disminuye el tamaño de la letra de los parrafos de las card*/
         font-size: 10px;
     }
+    .main-home{
+        height: auto;
+    }
+        
 }
 
 @media(max-width: 850px) {
@@ -494,4 +555,15 @@ footer {
         /*disminuye el tamano de la imagen de las card para esta media*/
         width: 15rem !important;
     }
+
+    .ft{
+        height: 100px;
+        width: 200px;
+        font-size: 20px;
+    }
+
+    .main-home{
+        height: 550px;
+    }
+        
 }
