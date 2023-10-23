@@ -1,3 +1,11 @@
+ @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,200;1,100&display=swap');
+
+
+
+
+
+
 h3 {
     /*Le asigna por defecto un tamaño de letra y un grosor a los titulos H3*/
     font-size: 80px;
@@ -164,7 +172,7 @@ nav {
 
 .img-header-banner {
     /*Le da estilos al logo principal*/
-    height: 150px;
+    height: 200px;
     width: auto;
     border-radius: 50%;
 }
@@ -174,13 +182,15 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 10px;
+    margin-left: -20px;
 }
 
 
 .h1estetica {
     /*Tamaño de letra al titulo principal del header*/
-    font-size: 60px
+    font-size: 60px;
+    font-family: 'Josefin Slab', serif;
+    font-weight: bold;
 }
 
 .titulo2 {
@@ -188,7 +198,8 @@ nav {
     font-size: 20px;
     position: absolute;
     left: 250px;
-    top: 165px;
+    top: 190px;
+    font-family: 'Courgette', cursive;
 }
 
 /*---------- MAIN ----------*/
@@ -460,7 +471,7 @@ footer {
 
     .img-header-banner {
         /*Le da estilos al logo principal, en este caso aumenta el tamaño del logo para este tamaño de pantalla*/
-        height: 100px;
+        height: 130px;
     }
 
     .contenido-header {
