@@ -1,11 +1,6 @@
  @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,200;1,100&display=swap');
 
-
-
-
-
-
 h3 {
     /*Le asigna por defecto un tamaño de letra y un grosor a los titulos H3*/
     font-size: 80px;
@@ -463,17 +458,23 @@ footer {
     }
 
     .img-logo{
+        /*Ajuta el logo del menu a la izquierda del menu*/
         margin-left: -27px;
         background-color: transparent;
     }
     .navbar2{
+        /*Separa el menu del margen izquierdo a este tamaño de pantalla*/
         padding-left: 20px;
     }
 
     .img-logo-nav {
         /*Le da estilos al logo pequeño del menu*/
         margin-left: -20px ;
-        
+    }
+ 
+    .ajuste-texto-menu{
+    /*ajusta el contenedor al tamaño del texto para que solo se haga click al estar arriba de la palabra*/
+    display: inline-block;
     }
 }
 
