@@ -77,8 +77,8 @@ nav {
 
 .img-logo {
     /*Le da estilos al logo pequeño del menu*/
-    width: 80px;
-    background-color: #d4af37;
+    width: 90px;
+    background-color: transparent;
     border-radius: 50%;
 }
 
@@ -156,6 +156,11 @@ nav {
     padding-bottom: 5px;
     height: 700px;
     position: relative;
+}
+
+.navbar2{
+    /*padin izquierdo del menu y el logo en pantalla normal*/
+    padding-left: 0px;
 }
 
 .contenido-header {
@@ -336,9 +341,10 @@ footer {
 }
 .img-logo-nav {
     /*Le da estilos al logo pequeño del menu*/
-    width: 50px;
-    background-color: #d4af37;
+    width: 70px;
+    background-color: transparent;
     border-radius: 50%;
+
 }
 
 .ft{
@@ -453,6 +459,20 @@ footer {
     .tarjeta1 {
         margin: 0 auto;
         /*cetra las card del main para este tamaño del media*/
+    }
+
+    .img-logo{
+        margin-left: -27px;
+        background-color: transparent;
+    }
+    .navbar2{
+        padding-left: 20px;
+    }
+
+    .img-logo-nav {
+        /*Le da estilos al logo pequeño del menu*/
+        margin-left: -20px ;
+        
     }
 }
 
@@ -580,6 +600,17 @@ footer {
 
     .main-home{
         height: 550px;
+    }
+
+    .img-logo{
+        margin-left: 0px;
+       
+    }
+
+    .img-logo-nav {
+        /*Le da estilos al logo pequeño del menu*/
+        margin-left: 0px ;
+        
     }
         
 }
