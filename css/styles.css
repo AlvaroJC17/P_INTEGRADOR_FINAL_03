@@ -337,6 +337,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white !important;
     
 }
 .img-logo-nav {
@@ -599,7 +600,7 @@ footer {
     }
 
     .main-home{
-        height: 550px;
+        height: auto;
     }
 
     .img-logo{
