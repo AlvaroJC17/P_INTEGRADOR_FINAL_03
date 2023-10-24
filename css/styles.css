@@ -389,6 +389,7 @@ footer {
     padding: 30px;
     margin: auto;
     margin-top: 50px;
+    margin-bottom: 50px;
     border-radius: 4px;
     font-family: 'calibri';
     color: white;
@@ -404,11 +405,11 @@ footer {
     width: 100%;
     padding: 10px;
     border-radius: 4px;
-    margin-bottom: 16px;
     border: 1px solid #1f53c5;
     font-family: 'calibri';
     font-size: 18px;
-    color: white;
+    color: black;
+    margin-left: 10px;
   }
   
   .form-register p {
@@ -435,7 +436,18 @@ footer {
     padding: 12px;
     color: white;
     margin: 16px 0;
-    font-size: 16px;
+    font-size: 25px;
+  }
+
+  .texto-laber-registro{
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+  }
+
+  .label-width{
+    width: 20% !important;
   }
 
 
@@ -542,6 +554,21 @@ footer {
     /*ajusta el contenedor al tamaño del texto para que solo se haga click al estar arriba de la palabra*/
     display: inline-block;
     }
+
+    .form-register {
+        width: 100%;
+        background: #db9e42;
+        padding: 15px;
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+  
+      }
+
+    .main-registrarse{
+        padding-left: 10px; ;
+        padding-right: 10px;
+    }
 }
 
 @media(max-width: 576px) {
@@ -588,6 +615,16 @@ footer {
         /*disminuye el tamano de la imagen de las card para esta media*/
         width: 21rem !important;
     }
+
+    .form-register .botons {
+        font-size: 20px;
+    }
+
+    .label-width{
+        width: 100% !important;
+      }
+
+ 
 }
 
 @media (max-width: 400px) {
@@ -628,6 +665,7 @@ footer {
         /*Posiciona los botones de login y registrase en el menu princial al centro*/
         justify-content: center !important;
         flex-wrap: wrap !important;
+        padding: 0px;
     }
 
     .titulo1 {
@@ -680,5 +718,30 @@ footer {
         margin-left: 0px ;
         
     }
+
+    .registrarse{
+        /*Da estilos a los botones de login y registrarse*/
+      
+        margin-right: 0px;
+        margin-left: 13px;
+       
+    }
+
+    .main-registrarse{
+        padding-left: 15px; ;
+        padding-right: 15px;
+    }
+
+    .form-register p{
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+    .form-register .botons {
+        font-size: 20px;
+    }
+
+    .label-width{
+        width: 100% !important;
+      }
         
 }
