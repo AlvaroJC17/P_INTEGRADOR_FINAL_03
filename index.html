@@ -101,9 +101,10 @@
 
             </div>
             <div class="modal-footer d-flex justify-content-center">
-              ¿No estas registrado?
-              <button class="btn btn-primary boton-interno" data-bs-target="#exampleModalToggle2"
-                data-bs-toggle="modal">REGISTRATE</button>
+              <div class="recuperar-contraseña">
+                ¿No estas registrado?
+                <a href="./registrarse/registrarse.html" class="text-decoration-none">Registrarse</a>
+              </div>
               <div class="recuperar-contraseña">
                 ¿Olvidaste la contraseña?
                 <a href="" class="text-decoration-none">Cambiar contraseña</a>
@@ -112,133 +113,14 @@
           </div>
         </div>
       </div>
-      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
-        tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5 texto-interno" id="exampleModalToggleLabel2">REGISTRARSE</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form action="">
-                <div class="mb-3">
-                  <label for="exampleFormControlInput3" class="form-label texto-label">EMAIL</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput3" placeholder="name@example.com">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlInput4" class="form-label texto-label">CONTRASEÑA</label>
-                  <input type="password" class="form-control" id="exampleFormControlInput4" placeholder="">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlInput5" class="form-label texto-label">REPETIR CONTRASEÑA</label>
-                  <input type="password" class="form-control" id="exampleFormControlInput5" placeholder="">
-                </div>
-                <div class="botones-formulario text-center">
-                  <button class="btn btn-primary boton-interno">ENVIAR</button>
-                  <button type="button" class="btn btn-primary boton-interno" data-bs-dismiss="modal"
-                    aria-label="Close">CERRAR</button>
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-              <p>¿Ya estas registrado?</p>
-              <button class="btn btn-primary boton-interno" data-bs-target="#exampleModalToggle1"
-                data-bs-toggle="modal">LOGIN</button>
-              <div class="recuperar-contraseña">
-                ¿Olvidaste la contraseña?
-                <a href="" class="text-decoration-none">Cambiar contraseña</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class=" boton-modal texto-login fw-bold" data-bs-target="#exampleModalToggle1"
-        data-bs-toggle="modal">LOGIN</button>
+     <button class="registrarse" data-bs-target="#exampleModalToggle1" data-bs-toggle="modal">LOGIN</button>
 
-
-      <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3"
-        tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5 texto-interno" id="exampleModalToggleLabel3">REGISTRARSE</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form action="">
-                <div class="mb-3">
-                  <label for="exampleFormControlInput6" class="form-label texto-label">EMAIL</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput6" placeholder="name@example.com">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlInput7" class="form-label texto-label">CONTRASEÑA</label>
-                  <input type="password" class="form-control" id="exampleFormControlInput7" placeholder="">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlInput8" class="form-label texto-label">REPETIR CONTRASEÑA</label>
-                  <input type="password" class="form-control" id="exampleFormControlInput8" placeholder="">
-                </div>
-                <div class="botones-formulario text-center">
-                  <button class="btn btn-primary boton-interno">ENVIAR</button>
-                  <button type="button" class="btn btn-primary boton-interno" data-bs-dismiss="modal"
-                    aria-label="Close">CERRAR</button>
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-              ¿Ya estas registrado?
-              <button class="btn btn-primary boton-interno" data-bs-target="#exampleModalToggle4"
-                data-bs-toggle="modal">LOGIN</button>
-              <div class="recuperar-contraseña">
-                ¿Olvidaste la contraseña?
-                <a href="" class="text-decoration-none">Cambiar contraseña</a>
-              </div>
-            </div>
-          </div>
+        <div class="d-flex justify-content-center  align-items-center">
+          <a class="registrarse" href="./registrarse/registrarse.html">REGISTRARSE</a>
         </div>
       </div>
-      <div class="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel4"
-        tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5 texto-interno" id="exampleModalToggleLabel4">INICIAR SESION</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form action="">
-                <div class="mb-3">
-                  <label for="exampleFormControlInput9" class="form-label texto-label">EMAIL</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput9" placeholder="name@example.com">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlInput10" class="form-label texto-label">CONTRASEÑA</label>
-                  <input type="password" class="form-control" id="exampleFormControlInput10" placeholder="">
-                </div>
-                <div class="botones-formulario text-center">
-                  <button class="btn btn-primary boton-interno">ENVIAR</button>
-                  <button type="button" class="btn btn-primary boton-interno" data-bs-dismiss="modal"
-                    aria-label="Close">CERRAR</button>
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-              ¿No estas registrado?
-              <button class="btn btn-primary boton-interno" data-bs-target="#exampleModalToggle3"
-                data-bs-toggle="modal">REGISTRATE</button>
-              <div class="recuperar-contraseña">
-                ¿Olvidaste la contraseña?
-                <a href="" class="text-decoration-none">Cambiar contraseña</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class=" boton-modal texto-login fw-bold" data-bs-target="#exampleModalToggle3"
-        data-bs-toggle="modal">REGISTRATE</button>
-    </div>
-  </nav>
+    </nav>
+    
 <!--------  HEADER ------------->
   <header class="header1">
     <div class="contenido-header">
