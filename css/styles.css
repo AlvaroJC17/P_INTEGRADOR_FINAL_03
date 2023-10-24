@@ -328,11 +328,13 @@ footer {
 /*---- HOME - NAV -----*/
 
 .row{
+    /*Le quita los margenes a las etiquetas que usen esta clase*/
     margin-left: 0px !important;
     margin-right: 0px !important;
 }
 
 .main-home{
+    /*Le da altura al main y ajusta todo en el centro de la pagina*/
     height: 540px;
     display: flex;
     justify-content: center;
@@ -346,8 +348,9 @@ footer {
     border-radius: 50%;
 
 }
-
+/*------ Contenido del body---------*/
 .ft{
+    /*Estilos de los cuadros de seleccion en el centro de la hoja, ademas de centar el texto*/
     height: 180px;
     width: 360px;
     margin: 10px;
@@ -376,14 +379,11 @@ footer {
     color: #c59b2d;
 }
 
-.img-splide{
-    height: 20px;
-    width: 50px;
-}
 
-/*Hoja datos personales*/
+/*PAGINA DE REGISTRO DE USUARIOS*/
 
 .form-register {
+    /*Le da estilos al formulario*/
     width: 60%;
     background: #db9e42;
     padding: 30px;
@@ -397,11 +397,13 @@ footer {
   }
   
   .form-register h4 {
+    /*Le da tamaño al titulo del formulario*/
     font-size: 22px;
     margin-bottom: 20px;
   }
   
   .controls {
+    /*Le da estilos a los input del formulario*/
     width: 100%;
     padding: 10px;
     border-radius: 4px;
@@ -420,16 +422,19 @@ footer {
   }
   
   .form-register a {
+    /*Estilo para las letras del ultimo link, que es para iniciar sesion*/
     color: white;
     text-decoration: none;
   }
   
   .form-register a:hover {
+    /*hoover del link para iniciar sesion*/
     color: white;
     text-decoration: underline;
   }
   
   .form-register .botons {
+    /*Estilos del boton de registrarse*/
     width: 100%;
     background: #1f53c5;
     border: none;
@@ -440,6 +445,7 @@ footer {
   }
 
   .texto-laber-registro{
+    /*Le da estilo a los textos al lado de cada input*/
     font-size: 15px;
     margin-bottom: 10px;
     font-weight: bold;
@@ -447,11 +453,9 @@ footer {
   }
 
   .label-width{
+    /*Controla el ancho de los imput*/
     width: 20% !important;
   }
-
-
-
 
 
 /*-------- MEDIAS PARA RESPONSIVE ---------*/
@@ -473,6 +477,7 @@ footer {
         font-size: 10px;
     }
     .main-home{
+        /*Coloca el alto de main el auto para este tamaño de pantalla, en la hoja de home*/
         height: auto;
     }
         
@@ -559,7 +564,6 @@ footer {
         width: 100%;
         background: #db9e42;
         padding: 15px;
-        margin: auto;
         margin-top: 50px;
         margin-bottom: 50px;
   
@@ -670,27 +674,27 @@ footer {
 
     .titulo1 {
         /*Centre el titulo principal (H1) y le da un margen izquierdo con respecto al logo principal, y disminuye el tamaño de la letra*/
-
         font-size: 50px !important;
     }
 
+
     .titulo2 {
         /*Posiciona el segundo texto (el mas pequeño) de la imagen del header en ese posicion debajo del titulo, ademas de bajarle el tamaño a la letra*/
-
         font-size: 15px;
     }
 
+
     h3 {
         /*disminuye el tamaño de letra de los h3 para esta medida de pantalla*/
-
         font-size: 30px;
     }
 
+
     .texto-img-fijas {
         /*Disminuye la letra de los titulos de las imagenes fijas que no se mueven con el scroll*/
-
         font-size: 12px;
     }
+
 
     .tarjeta2,
     .tarjeta1 {
@@ -710,8 +714,8 @@ footer {
 
     .img-logo{
         margin-left: 0px;
-       
     }
+       
 
     .img-logo-nav {
         /*Le da estilos al logo pequeño del menu*/
@@ -721,13 +725,13 @@ footer {
 
     .registrarse{
         /*Da estilos a los botones de login y registrarse*/
-      
         margin-right: 0px;
         margin-left: 13px;
        
     }
 
     .main-registrarse{
+        /*Le asigna padding al main para este tamaño de pantalla*/
         padding-left: 15px; ;
         padding-right: 15px;
     }
@@ -741,7 +745,12 @@ footer {
     }
 
     .label-width{
+        /*aumenta el tamaño de los input al 100% para este tamaño de pantalla*/
         width: 100% !important;
+      }
+      
+      .main-home{
+        margin-top: 30px;
       }
         
 }
