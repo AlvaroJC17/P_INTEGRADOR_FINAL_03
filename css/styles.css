@@ -120,30 +120,6 @@ nav {
 }
 
 
-.boton-interno {
-    /*Le asigna color a los botones dentro de la ventana de login*/
-    background-color: #c59b2d !important;
-    border-color: #c59b2d !important;
-}
-
-.boton-interno:hover {
-    /*Hace la transicion de color al pasar el mouse arriba de los botones dentro de las ventas de login y registrarse*/
-    background-image: linear-gradient(to bottom, #f4f0cd, #ebdf9d);
-}
-
-.bg-body-tertiary {
-    /*No se que hace, pero al borrarlo, me saltan unas advertencias en la consola del navegador*/
-    background-color: white !important;
-}
-
-.modal-header,
-.modal-body,
-.modal-footer {
-    /*Le camabia el color de fondo y le coloca bordes al las ventanas de login y registrarse*/
-    background-image: linear-gradient(to left, #c59b2d, #f4f0cd);
-    border: #724921;
-}
-
 /*------ HEADER --------*/
 
 .header1 {
@@ -208,10 +184,6 @@ nav {
 }
 
 /*---------- MAIN ----------*/
-main {
-    /*Le asigno un color de fondo a todo el main*/
-
-}
 
 .imagen-fija-fondo {
     /*Es la image fija que no se mueve con el scroll, la opcion fixed es la que la hace fija*/
@@ -335,10 +307,12 @@ footer {
 
 .main-home{
     /*Le da altura al main y ajusta todo en el centro de la pagina*/
-    height: 540px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;  
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .img-logo-nav {
@@ -379,84 +353,214 @@ footer {
     color: #c59b2d;
 }
 
+/*------ FOOTER DE LOS USUARIOS REGISTRADOS*/
 
-/*PAGINA DE REGISTRO DE USUARIOS*/
+footer-home {
+    /*Le da el color degradado al footer, el ancho y los maregenes*/
+    background-image: linear-gradient(to right, #d4af37, #724921);
+    width: 100%;
+    bottom: 0;
+    margin: 0px 0px 0px 0px !important;
+}
 
-.form-register {
-    /*Le da estilos al formulario*/
-    width: 60%;
+.contenedor-logo-final-home{
+    /*estilos para el contenedor del logo que esta de ultimo en la pagina*/
+    text-align: center;
+}
+
+.img-logo-final-home{
+    /*Estilos al ultimo logo del footer*/
+    border-radius: 50%;
+    width: 80px;
+}
+
+  /*----- PAGINA LOGIN ---------*/
+
+  .login-box {
+    width: 320px;
+    height: 100%;
     background: #db9e42;
-    padding: 30px;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-radius: 4px;
-    font-family: 'calibri';
-    color: white;
-    box-shadow: 7px 13px 37px #000;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 70px 30px;
+    margin: 60px 15px 60px 15px;
+    border-radius: 40px 0px 40px 0px;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.500);
+    position: relative;
   }
   
-  .form-register h4 {
-    /*Le da tamaño al titulo del formulario*/
+  .login-box .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+  }
+  
+  .login-box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
     font-size: 22px;
+  }
+  
+  .login-box label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .login-box input {
+    width: 100%;
     margin-bottom: 20px;
   }
   
-  .controls {
-    /*Le da estilos a los input del formulario*/
-    width: 100%;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #1f53c5;
-    font-family: 'calibri';
-    font-size: 18px;
-    color: black;
-    margin-left: 10px;
-  }
-  
-  .form-register p {
-    height: 40px;
-    text-align: center;
-    font-size: 25px;
-    line-height: 40px;
-  }
-  
-  .form-register a {
-    /*Estilo para las letras del ultimo link, que es para iniciar sesion*/
-    color: white;
-    text-decoration: none;
-  }
-  
-  .form-register a:hover {
-    /*hoover del link para iniciar sesion*/
-    color: white;
-    text-decoration: underline;
-  }
-  
-  .form-register .botons {
-    /*Estilos del boton de registrarse*/
-    width: 100%;
-    background: #1f53c5;
+  .login-box input[type="text"], .login-box input[type="password"] {
     border: none;
-    padding: 12px;
-    color: white;
-    margin: 16px 0;
-    font-size: 25px;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .login-box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #724921;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+  }
+  
+  .login-box input[type="submit"]:hover {
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+  }
+  
+  .login-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+  }
+  
+  .login-box a:hover {
+    color: #fff;
   }
 
-  .texto-laber-registro{
-    /*Le da estilo a los textos al lado de cada input*/
-    font-size: 15px;
-    margin-bottom: 10px;
-    font-weight: bold;
+  /*PAGINA DE REGISTRO DE USUARIOS*/
 
+  .section-registrarse{
+    border-radius: 40px 0px 40px 0px;
+    background-color: #db9e42;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.500);
+    width: 70%;
+    margin: 30px
   }
 
-  .label-width{
-    /*Controla el ancho de los imput*/
-    width: 20% !important;
+.img-registrarse{
+    background-image: url(../imagenes/istockphoto-968940310-1024x1024.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40px 0px 0px 0px;
+}
+
+.boton-de-registro{
+    display: block !important;
+}
+
+/*------- DISEÑO BOTONES ------*/
+
+/*BOTON DE FORM REGISTRARSE*/
+.bn632-hover {
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+  .bn632-hover:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+  .bn632-hover:focus {
+    outline: none;
+  }
+  
+  .bn632-hover.bn26 {
+    background-image: linear-gradient(
+      to right,
+      #25aae1,
+      #4481eb,
+      #04befe,
+      #3f86ed
+    );
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
   }
 
+  /*ESTILOS DEL BOTON DE LOGIN*/
+  .bn632-hover-login {
+    width: 220px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 50px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+
+  .bn632-hover-login:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+
+  .bn632-hover-login:focus {
+    outline: none;
+  }
+
+  .bn632-hover-login.bn26 {
+    background-image: linear-gradient(
+      to right,
+      #25aae1,
+      #4481eb,
+      #04befe,
+      #3f86ed
+    );
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  }
 
 /*-------- MEDIAS PARA RESPONSIVE ---------*/
 
@@ -489,11 +593,7 @@ footer {
         font-size: 11px !important;
     }
 
-    .registrarse{
-        /*Da estilos a los botones de login y registrarse*/
-        font-size: 11px;
-       
-    }
+  
 }
 
 @media(max-width: 767px) {
@@ -560,19 +660,7 @@ footer {
     display: inline-block;
     }
 
-    .form-register {
-        width: 100%;
-        background: #db9e42;
-        padding: 15px;
-        margin-top: 50px;
-        margin-bottom: 50px;
-  
-      }
-
-    .main-registrarse{
-        padding-left: 10px; ;
-        padding-right: 10px;
-    }
+ 
 }
 
 @media(max-width: 576px) {
@@ -620,15 +708,13 @@ footer {
         width: 21rem !important;
     }
 
-    .form-register .botons {
-        font-size: 20px;
+    .section-registrarse{
+        width: 100%;
+        margin: 10px;
+        
     }
-
-    .label-width{
-        width: 100% !important;
-      }
-
- 
+       
+      
 }
 
 @media (max-width: 400px) {
@@ -752,5 +838,5 @@ footer {
       .main-home{
         margin-top: 30px;
       }
-        
+      
 }
