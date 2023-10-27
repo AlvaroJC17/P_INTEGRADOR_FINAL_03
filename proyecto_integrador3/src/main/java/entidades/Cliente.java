@@ -1,9 +1,10 @@
 package entidades;
 
+import jakarta.persistence.Entity;
 
-
-public class Cliente {
+@Entity
+public final class Cliente extends Persona {
 	
-
+	private Integer edad;
 
 }
