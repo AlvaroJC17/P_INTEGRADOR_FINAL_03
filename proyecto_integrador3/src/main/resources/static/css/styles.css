@@ -50,6 +50,11 @@ a {
 
 /*------------  NAV ---------------*/
 
+.navbar1 {
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
 nav {
     /*Le da la iamgen degradada de fondo del menu principal*/
     background-image: linear-gradient(to right, #d4af37, #724921);
@@ -307,13 +312,18 @@ footer {
 
 .main-home{
     /*Le da altura al main y ajusta todo en el centro de la pagina*/
-    height: auto;
+    height: 80% !important;
     display: flex;
     justify-content: center;
     align-items: center;  
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.body-home{
+    position: relative;
+    height: 100vh;
+   }   
 
 .img-logo-nav {
     /*Le da estilos al logo pequeño del menu*/
@@ -355,12 +365,13 @@ footer {
 
 /*------ FOOTER DE LOS USUARIOS REGISTRADOS*/
 
-footer-home {
+.footer-home {
     /*Le da el color degradado al footer, el ancho y los maregenes*/
     background-image: linear-gradient(to right, #d4af37, #724921);
     width: 100%;
     bottom: 0;
     margin: 0px 0px 0px 0px !important;
+    position: absolute;
 }
 
 .contenedor-logo-final-home{
@@ -371,20 +382,65 @@ footer-home {
 .img-logo-final-home{
     /*Estilos al ultimo logo del footer*/
     border-radius: 50%;
-    width: 80px;
+    width: 50px;
 }
 
   /*----- PAGINA LOGIN ---------*/
 
-  .login-box {
+  .body-login{
+    height: 100vh;
+    position: relative;
+  }
+
+  .texto-recuperar1{
+    margin-top: 15px;
+    text-align: center;
+}
+
+.texto-recuperar1 .texto{
+    font-size: 20px;
+}
+
+.texto-recuperar2 {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .texto-recuperar2 .texto{
+        font-size: 20px;
+      }
+ 
+  .form-login{
+    margin-top: 50px;
+  }
+
+  .main-login{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imagen-formulario-login{
+    background-image: url(../imagenes/istockphoto-968940310-1024x1024.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
     width: 320px;
-    height: 100%;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.500);
+    border-radius: 40px 0px 00px 0px;
+  }
+
+  .login-box {
+    width: 400px;
+    height: 700px;
     background: #db9e42;
     color: #fff;
     box-sizing: border-box;
     padding: 70px 30px;
-    margin: 60px 15px 60px 15px;
-    border-radius: 40px 0px 40px 0px;
+    margin: 0px 0px 0px 0px;
+    border-radius: 0px 0px 40px 0px;
     box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.500);
     position: relative;
   }
@@ -402,7 +458,8 @@ footer-home {
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
-    font-size: 22px;
+    font-size: 27px;
+    font-weight: bold;
   }
   
   .login-box label {
@@ -410,6 +467,7 @@ footer-home {
     padding: 0;
     font-weight: bold;
     display: block;
+    font-size: 22px;
   }
   
   .login-box input {
@@ -456,6 +514,15 @@ footer-home {
 
   /*PAGINA DE REGISTRO DE USUARIOS*/
 
+  .main-registrarse-2{
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.texto-label{
+    font-size: 17px;
+    margin-bottom: 0px;
+}
   .section-registrarse{
     border-radius: 40px 0px 40px 0px;
     background-color: #db9e42;
@@ -480,13 +547,13 @@ footer-home {
 
 /*BOTON DE FORM REGISTRARSE*/
 .bn632-hover {
-    width: 160px;
+    width: 300px;
     font-size: 16px;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
     margin: 20px;
-    height: 55px;
+    height: 50px;
     text-align:center;
     border: none;
     background-size: 300% 100%;
@@ -522,12 +589,12 @@ footer-home {
 
   /*ESTILOS DEL BOTON DE LOGIN*/
   .bn632-hover-login {
-    width: 220px;
+    width: 300px;
     font-size: 16px;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
-    margin: 20px;
+    margin: 50px 20px 20px 20px;
     height: 50px;
     text-align:center;
     border: none;
@@ -564,7 +631,88 @@ footer-home {
 
 /*-------- MEDIAS PARA RESPONSIVE ---------*/
 
-@media(max-width: 992px) {
+
+
+@media(max-width: 1280px){
+    
+    .main-registrarse-2{
+        padding-bottom: 50px;
+    }
+
+    .body-login{
+        position: relative;
+        padding-bottom: 50px;
+        height: 100%;
+      }
+
+   .body-home{
+    position: relative;
+    padding-bottom: 50px;
+    height: 100vh;
+   }   
+
+    .main-home{
+        /*Le da altura al main y ajusta todo en el centro de la pagina*/
+        height: auto !important;
+       
+    }
+
+    .bn632-hover-login {
+        width: 200px;
+      }
+    .texto-label{
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+
+    .main-login{
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+    .texto-recuperar1 .texto{
+        font-size: 15px;
+    }
+
+    .texto-recuperar2 .texto{
+        font-size: 15px;
+    }
+
+    .texto-recuperar1{
+        margin-top: 15px;
+        text-align: center;
+          }
+           .texto-recuperar2{
+            text-align: center;
+            margin-top: 10px;
+          }
+    .bn632-hover-login {
+        margin: 10px
+      }
+
+    .form-login{
+        margin-top: 10px;
+      }
+
+    .imagen-formulario-login{
+        height: 500px;
+        width: 320px;
+      }
+    
+      .login-box {
+        width: 320px;
+        height: 500px;
+    }
+        
+  .login-box h1 {
+    font-size: 22px;
+  }
+  
+  .login-box label {
+  font-size: 17px;
+  }
+      
+
     .titulos-footer {
         /*Le da tamaños a los titulos de que estan en el footer*/
         font-size: 45px;
@@ -580,19 +728,26 @@ footer-home {
         /*disminuye el tamaño de la letra de los parrafos de las card*/
         font-size: 10px;
     }
-    .main-home{
-        /*Coloca el alto de main el auto para este tamaño de pantalla, en la hoja de home*/
-        height: auto;
-    }
-        
 }
 
-@media(max-width: 880px) {
+
+@media(max-width: 992px) {
     .navbar4 {
         /*Le da estilos a la lista del menu, tamaño de letra, centrado y grosor de letra*/
         font-size: 11px !important;
     }
+  
+    .ft {
+        height: 100px;
+        width: 360px;
+        font-size: 20px;
+    }
 
+    .main-home{
+        margin: 0px;
+    }
+       
+    
   
 }
 
@@ -660,6 +815,10 @@ footer-home {
     display: inline-block;
     }
 
+    .imagen-formulario-login{
+        display: none;
+    }
+
  
 }
 
@@ -718,6 +877,12 @@ footer-home {
 }
 
 @media (max-width: 400px) {
+
+    .bn632-hover {
+        width: 180px;
+    
+      }
+
     .boton-modal {
         /*Le da estilos a los botones de login y registrase del menu principal, en este tambien les pone fondo transparente*/
         min-width: 80px;
@@ -796,6 +961,8 @@ footer-home {
 
     .main-home{
         height: auto;
+        margin-top: 10px;
+        
     }
 
     .img-logo{
@@ -835,8 +1002,5 @@ footer-home {
         width: 100% !important;
       }
       
-      .main-home{
-        margin-top: 30px;
-      }
       
 }
