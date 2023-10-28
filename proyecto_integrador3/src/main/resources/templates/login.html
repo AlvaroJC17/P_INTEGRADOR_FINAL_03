@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="../static/css/styles.css">
         <title>Iniciar Sesion</title>
       </head>
-<body>
+<body class="body-login">
     
     <a href="#" target="_blank" class="boton-flotante">
         <i class="fa-brands fa-whatsapp"></i>
@@ -38,22 +38,34 @@
       </div>
     </div>
 
-    <main class="main-registrarse d-flex justify-content-center align-items-center ">
-       
-      <div class="login-box">
-        <img src="../static/imagenes/Nani-removebg-preview.png" class="avatar" alt="Avatar Image">
-        <h1>Iniciar sesion</h1>
-        <form>
-          <!-- USERNAME INPUT -->
-          <label for="username">Email</label>
-          <input type="text" placeholder="Enter Username">
-          <!-- PASSWORD INPUT -->
-          <label for="password">Contraseña</label>
-          <input type="password" placeholder="Enter Password">
-          <a href="#"><button class="bn632-hover-login bn26">Iniciar sesion</button></a>
-          <a class="fs-6"  href="#">Recuperar contraseña</a><br>
-          <a class="fs-6" href="./registrarse.html">¿No tienes cuenta?</a>
-        </form>
+    <main class="main-login">
+       <div class="row">
+        <div class=" imagen-formulario-login col-md-6">
+        </div>
+        <div class="col-md-6 px-0">
+          <div class="login-box">
+            <img src="../static/imagenes/Nani-removebg-preview.png" class="avatar" alt="Avatar Image">
+            <h1>Iniciar sesion</h1>
+            <form class="form-login">
+              <!-- USERNAME INPUT -->
+              <label for="username">Email</label>
+              <input type="text" id="username" placeholder="Enter Username">
+              <!-- PASSWORD INPUT -->
+              <label for="password">Contraseña</label>
+              <input type="password" id="password" placeholder="Enter Password">
+              <div class="d-flex justify-content-center align-items-center ">
+              <a href="#"><button class="bn632-hover-login bn26">Iniciar sesion</button></a>
+              </div>
+              <div class="texto-recuperar1">
+              <a class="texto"  href="#">Recuperar contraseña</a><br>
+            </div>
+            <div class="texto-recuperar2">
+              <a class="texto" href="./registrarse.html">¿No tienes cuenta?</a>
+            </div>
+            </form>
+          </div>
+        </div>
+    
       </div>
     </main>
 
