@@ -1,5 +1,7 @@
 package entidades;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import enums.Rol;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -15,6 +17,7 @@ public class Usuario {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GenericGenerator(name = "uuid")
     protected String id;
     
     protected String email;
