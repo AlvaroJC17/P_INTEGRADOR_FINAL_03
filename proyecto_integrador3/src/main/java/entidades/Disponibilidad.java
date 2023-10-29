@@ -2,9 +2,11 @@ package entidades;
 
 import org.hibernate.annotations.GenericGenerator;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
+@Entity
 public class Disponibilidad {
 	
 	@Id
