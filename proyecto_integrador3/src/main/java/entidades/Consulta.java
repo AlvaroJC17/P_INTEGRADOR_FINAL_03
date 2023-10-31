@@ -12,8 +12,8 @@ import jakarta.persistence.OneToOne;
 public class Consulta {
 	
 	@Id
-    @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid", strategy = "uuid2")
+	@GeneratedValue(generator = "uuid")
+	@GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
     
     @OneToOne

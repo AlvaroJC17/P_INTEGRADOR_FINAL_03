@@ -10,8 +10,8 @@ import jakarta.persistence.Id;
 public class Disponibilidad {
 	
 	@Id
-    @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid")
+	@GeneratedValue(generator = "uuid")
+	@GenericGenerator(name = "uuid")
     private String id;
 
     private int  entrada;
