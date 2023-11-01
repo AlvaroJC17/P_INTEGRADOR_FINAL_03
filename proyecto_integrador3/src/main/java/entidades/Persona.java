@@ -15,7 +15,6 @@ import jakarta.persistence.TemporalType;
 @Inheritance
 public abstract class Persona extends Usuario {
 
-	protected Integer dni;
 	protected String nombre;
 	protected String apellido;
 
@@ -32,25 +31,15 @@ public abstract class Persona extends Usuario {
 	//Constructores
 	public Persona() {}
 
-	public Persona(Integer dni, String nombre, String apellido, Sexo sexo, Date fechaNacimiento, String domicilio,
-			Integer telefono, String id, String email, String password, Rol rol, Boolean activo ) {
-		super(id, email, password, rol, activo);
-		this.dni = dni;
+	public Persona(String nombre, String apellido, Sexo sexo, Date fechaNacimiento, String domicilio,
+			Integer telefono, String id, String dni, String email, String password, Rol rol, Boolean activo) {
+		super(id, dni, email, password, rol, activo);
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.sexo = sexo;
 		this.fechaNacimiento = fechaNacimiento;
 		this.domicilio = domicilio;
 		this.telefono = telefono;
-	}
-	
-	//Setters y Getters
-	public Integer getDni() {
-		return dni;
-	}
-
-	public void setDni(Integer dni) {
-		this.dni = dni;
 	}
 
 	public String getNombre() {
@@ -101,13 +90,16 @@ public abstract class Persona extends Usuario {
 		this.telefono = telefono;
 	}
 
-	//Metodos
 	@Override
 	public String toString() {
-		return super.toString() + "Persona [dni=" + dni + ", nombre=" + nombre + ", apellido=" + apellido + ", sexo=" + sexo
-				+ ", fechaNacimiento=" + fechaNacimiento + ", domicilio=" + domicilio + ", telefono=" + telefono + "]";
+		return super.toString() + "Persona [nombre=" + nombre + ", apellido=" + apellido + ", sexo=" + sexo + ", fechaNacimiento="
+				+ fechaNacimiento + ", domicilio=" + domicilio + ", telefono=" + telefono + "]";
 	}
 
+	
+
+	
+	
 	
 	
 

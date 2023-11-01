@@ -1,5 +1,8 @@
 package servicios;
 
-public class ServicioPersona {
+import org.springframework.stereotype.Service;
+
+@Service
+public class ServicioPersona { //No es necesario crear metodos para esta clase
 
 }

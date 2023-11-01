@@ -12,15 +12,18 @@ public final class Cliente extends Persona {
 	private Integer edad;
 	
 	//Constructores
-	Cliente(){}
+	Cliente(){
+		
+	}
 
-	public Cliente(Integer edad, Integer dni, String nombre, String apellido, Sexo sexo, Date fechaNacimiento, String domicilio,
-			Integer telefono, String id, String email, String password, Rol rol, Boolean activo ) {
-		super(dni, nombre, apellido, sexo, fechaNacimiento, domicilio, telefono, id, email, password, rol, activo);
+	
+	public Cliente(Integer edad, String nombre, String apellido, Sexo sexo, Date fechaNacimiento, String domicilio, Integer telefono,
+			String id, String dni, String email, String password, Rol rol, Boolean activo) {
+		super(nombre, apellido, sexo, fechaNacimiento, domicilio, telefono, id, dni, email, password, rol, activo);
 		this.edad = edad;
 	}
 
-	//Setter y Getters
+	//Setters y Getters
 	public Integer getEdad() {
 		return edad;
 	}
@@ -32,12 +35,8 @@ public final class Cliente extends Persona {
 	//Metodos
 	@Override
 	public String toString() {
-		return "Cliente [edad=" + edad + "]";
+		return super.toString() + "Cliente [edad=" + edad + "]";
 	}
 
-	
-	
-	
-	
 
 }

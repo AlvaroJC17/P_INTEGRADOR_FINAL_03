@@ -29,22 +29,15 @@ public final class Profesional extends Persona {
     //Constructores
     public Profesional() {}
 
-	public Profesional(String matricula, Tratamiento tratamiento, Disponibilidad disponibilidad, Provincias provincia,
-			Integer dni, String nombre, String apellido, Sexo sexo, Date fechaNacimiento, String domicilio,
-			Integer telefono, String id, String email, String password, Rol rol, Boolean activo) {
-		super(dni, nombre, apellido, sexo, fechaNacimiento, domicilio, telefono, id, email, password, rol, activo );
+	public Profesional(String matricula, Tratamiento tratamiento, Disponibilidad disponibilidad, Provincias provincia, String nombre, String apellido, Sexo sexo, Date fechaNacimiento, String domicilio,
+			Integer telefono, String id, String dni, String email, String password, Rol rol, Boolean activo) {
+		super(nombre, apellido, sexo, fechaNacimiento, domicilio, telefono, id, dni, email, password, rol, activo);
 		this.matricula = matricula;
 		this.tratamiento = tratamiento;
 		this.disponibilidad = disponibilidad;
 		this.provincia = provincia;
 	}
 
-	public Profesional(Integer dni, String nombre, String apellido, Sexo sexo, Date fechaNacimiento, String domicilio,
-			Integer telefono, String id, String email, String password, Rol rol, Boolean activo) {
-		super();
-
-	}
-	
 	//Setters y Getters
 	public String getMatricula() {
 		return matricula;
@@ -81,10 +74,14 @@ public final class Profesional extends Persona {
 	//Metodos
 	@Override
 	public String toString() {
-		return super.toString() + "Profesional [matricula=" + matricula + ", tratamiento=" + tratamiento + ", disponibilidad="
+		return super.toString() +  "Profesional [matricula=" + matricula + ", tratamiento=" + tratamiento + ", disponibilidad="
 				+ disponibilidad + ", provincia=" + provincia + "]";
-	};
-    
+	}
+
+	
+	
+
+	
 	
     
 

@@ -13,6 +13,12 @@ import entidades.Usuario;
 
 @Repository
 public interface RepositorioUsuario extends JpaRepository<Usuario, String>{
+	
+	@Query("SELECT u FROM Usuario u WHERE u.email = :email")
+	public Usuario buscarPorEmail(@Param("email") String email); // este busca un usuario por mail
+	
+	@Query("SELECT u FROM Usuario u WHERE u.email = :email")
+    public Optional<Usuario> buscarPorEmailOptional(@Param("email") String email); // este busca un usuario por mail pero la opcion de que el resultado puede estar vacio o null
 
     @Query("SELECT u FROM Usuario u WHERE u.dni = :dni")
     public Usuario buscarPorDni(@Param("dni") String dni);
