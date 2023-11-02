@@ -1,19 +1,18 @@
-package entidades;
+package com.javabootcamp.proyecto_integrador3.Entidades;
 
 import java.util.Arrays;
 
-import org.hibernate.annotations.GenericGenerator;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class Disponibilidad {
-	
+
 	@Id
-	@GeneratedValue(generator = "uuid")
-	@GenericGenerator(name = "uuid")
+	@GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
 
     private int  entrada;
@@ -115,6 +114,4 @@ public class Disponibilidad {
 				+ inicioDescanso + ", finDescanso=" + finDescanso + ", dias=" + Arrays.toString(dias) + "]";
 	}
 	
-	
-
 }

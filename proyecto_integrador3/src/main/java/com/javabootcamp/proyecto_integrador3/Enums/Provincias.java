@@ -1,7 +1,7 @@
-package enums;
+package com.javabootcamp.proyecto_integrador3.Enums;
 
 public enum Provincias {
-	
+
 	BUENOS_AIRES,
     CATAMARCA,
     CHACO,

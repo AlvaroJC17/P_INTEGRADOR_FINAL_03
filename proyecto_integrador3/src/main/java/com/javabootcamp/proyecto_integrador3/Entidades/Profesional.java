@@ -1,19 +1,20 @@
-package entidades;
+package com.javabootcamp.proyecto_integrador3.Entidades;
 
 import java.util.Date;
 
-import enums.Provincias;
-import enums.Rol;
-import enums.Sexo;
-import enums.Tratamiento;
+import com.javabootcamp.proyecto_integrador3.Enums.Provincias;
+import com.javabootcamp.proyecto_integrador3.Enums.Rol;
+import com.javabootcamp.proyecto_integrador3.Enums.Sexo;
+import com.javabootcamp.proyecto_integrador3.Enums.Tratamiento;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.OneToOne;
 
 @Entity
-public final class Profesional extends Persona {
-	
+public class Profesional extends Persona {
+
 	//Atributos
     private String matricula;
 
@@ -82,9 +83,4 @@ public final class Profesional extends Persona {
 
 	
 	
-
-	
-	
-    
-
 }

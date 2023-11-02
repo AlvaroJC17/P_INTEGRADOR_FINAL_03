@@ -1,7 +1,7 @@
-package enums;
+package com.javabootcamp.proyecto_integrador3.Enums;
 
 public enum Tratamiento {
-	
+
 	FACIALES_ANTIAGE,
 	FACIALES_DESPIGMENTANTES,
 	FACIALES_HIDRATANTES,
@@ -12,5 +12,4 @@ public enum Tratamiento {
 	LAMINADO_CEJAS,
 	HYDRALIPS, 
 	LIMPIEZA_ESPALDA;
-
 }

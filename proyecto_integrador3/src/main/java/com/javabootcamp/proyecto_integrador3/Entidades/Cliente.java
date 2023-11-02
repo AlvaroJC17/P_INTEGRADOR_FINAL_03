@@ -1,15 +1,17 @@
-package entidades;
+package com.javabootcamp.proyecto_integrador3.Entidades;
 
 import java.util.Date;
 
-import enums.Rol;
-import enums.Sexo;
+import com.javabootcamp.proyecto_integrador3.Enums.Rol;
+import com.javabootcamp.proyecto_integrador3.Enums.Sexo;
+
 import jakarta.persistence.Entity;
 
+
 @Entity
-public final class Cliente extends Persona {
-	
-	private Integer edad;
+public class Cliente extends Persona {
+
+private Integer edad;
 	
 	//Constructores
 	public Cliente(){
@@ -37,6 +39,4 @@ public final class Cliente extends Persona {
 	public String toString() {
 		return super.toString() + "Cliente [edad=" + edad + "]";
 	}
-
-
 }

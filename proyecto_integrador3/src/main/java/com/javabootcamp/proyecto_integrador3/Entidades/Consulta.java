@@ -1,19 +1,19 @@
-package entidades;
+package com.javabootcamp.proyecto_integrador3.Entidades;
 
-import org.hibernate.annotations.GenericGenerator;
+
+
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
-
 @Entity
 public class Consulta {
-	
+
 	@Id
-	@GeneratedValue(generator = "uuid")
-	@GenericGenerator(name = "uuid", strategy = "uuid2")
+	@GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
     
     @OneToOne
@@ -111,6 +111,4 @@ public class Consulta {
 				+ diagnostico + ", fecha=" + fecha + ", horario=" + horario + ", precio=" + precio + "]";
 	};
     
-    
-
 }

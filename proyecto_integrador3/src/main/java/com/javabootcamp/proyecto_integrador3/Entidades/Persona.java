@@ -1,9 +1,10 @@
-package entidades;
+package com.javabootcamp.proyecto_integrador3.Entidades;
 
 import java.util.Date;
 
-import enums.Rol;
-import enums.Sexo;
+import com.javabootcamp.proyecto_integrador3.Enums.Rol;
+import com.javabootcamp.proyecto_integrador3.Enums.Sexo;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -13,7 +14,7 @@ import jakarta.persistence.TemporalType;
 
 @Entity
 @Inheritance
-public abstract class Persona extends Usuario {
+public abstract class Persona extends Usuario{
 
 	protected String nombre;
 	protected String apellido;
@@ -95,12 +96,5 @@ public abstract class Persona extends Usuario {
 		return super.toString() + "Persona [nombre=" + nombre + ", apellido=" + apellido + ", sexo=" + sexo + ", fechaNacimiento="
 				+ fechaNacimiento + ", domicilio=" + domicilio + ", telefono=" + telefono + "]";
 	}
-
-	
-
-	
-	
-	
-	
 
 }
