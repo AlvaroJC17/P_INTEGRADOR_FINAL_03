@@ -1,30 +1,20 @@
-package servicios;
+package com.javabootcamp.proyecto_integrador3.Servicios;
 
-import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.security.core.GrantedAuthority;
-//import org.springframework.security.core.authority.SimpleGrantedAuthority;
-//import org.springframework.security.core.userdetails.User;
-//import org.springframework.security.core.userdetails.UserDetails;
-//import org.springframework.security.core.userdetails.UserDetailsService;
-//import org.springframework.security.core.userdetails.UsernameNotFoundException;
-//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
-
-import static java.lang.Boolean.FALSE; // la clases false y true son de java
+import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import Excepciones.MiExcepcion;
-import entidades.Usuario;
-import enums.Rol;
-import jakarta.servlet.http.HttpSession;
-import repositorios.RepositorioUsuario;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.javabootcamp.proyecto_integrador3.Entidades.Usuario;
+import com.javabootcamp.proyecto_integrador3.Enums.Rol;
+import com.javabootcamp.proyecto_integrador3.MiExcepcion.MiExcepcion;
+import com.javabootcamp.proyecto_integrador3.Repositorios.RepositorioUsuario;
 
 @Service
 public class ServicioUsuario /* implements UserDetailsService*/ {

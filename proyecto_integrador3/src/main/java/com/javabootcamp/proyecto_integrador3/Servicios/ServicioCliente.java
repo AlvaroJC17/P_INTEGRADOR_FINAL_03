@@ -1,4 +1,4 @@
-package servicios;
+package com.javabootcamp.proyecto_integrador3.Servicios;
 
 import java.util.Date;
 import java.util.Optional;
@@ -7,12 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import Excepciones.MiExcepcion;
-import entidades.Cliente;
-import entidades.Usuario;
-import enums.Sexo;
-import repositorios.RepositorioCliente;
-import repositorios.RepositorioUsuario;
+import com.javabootcamp.proyecto_integrador3.Entidades.Cliente;
+import com.javabootcamp.proyecto_integrador3.Entidades.Usuario;
+import com.javabootcamp.proyecto_integrador3.Enums.Sexo;
+import com.javabootcamp.proyecto_integrador3.MiExcepcion.MiExcepcion;
+import com.javabootcamp.proyecto_integrador3.Repositorios.RepositorioCliente;
+import com.javabootcamp.proyecto_integrador3.Repositorios.RepositorioUsuario;
+
 
 @Service
 public class ServicioCliente {
@@ -136,8 +137,5 @@ public class ServicioCliente {
 	    		throw new MiExcepcion("Error, el numero de telefono no puede estar vacio");
 			}
 	    }
-	    
-
-	    
 
 }

@@ -1,13 +1,15 @@
-package servicios;
+package com.javabootcamp.proyecto_integrador3.Servicios;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import entidades.Disponibilidad;
+import com.javabootcamp.proyecto_integrador3.Entidades.Disponibilidad;
+import com.javabootcamp.proyecto_integrador3.Repositorios.RepositorioDisponibilidad;
+
 import jakarta.transaction.Transactional;
-import repositorios.RepositorioDisponibilidad;
+
 
 @Service
 public class ServicioDisponibilidad {
@@ -35,6 +37,5 @@ public class ServicioDisponibilidad {
 	        }
 	        return null;
 	    }
-	
 
 }
