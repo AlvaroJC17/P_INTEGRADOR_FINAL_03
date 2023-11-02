@@ -36,6 +36,7 @@ public class ControladorPortal {
 	        return "home.html";
 	    }
 
+	    /*      COMENTADO HASTA Q LO TENGAMOS EN HTML
 	    @GetMapping("/especialidades")
 	    public String listaEspecialidades(ModelMap modelo) throws MiExcepcion {
 
@@ -68,7 +69,7 @@ public class ControladorPortal {
 
 	    return "especialidades.html";
 	}
-
+*/
 	    @GetMapping("/")
 	    public String inicio(HttpSession session, ModelMap modelo) {
 
@@ -100,6 +101,7 @@ public class ControladorPortal {
 	            modelo.put("exito", "Usuario registrado correctamente!");
 
 	            return "index.html";
+	            
 	        } catch (MiExcepcion e) {
 	            System.out.println(e.getMessage());
 	            modelo.put("error", e.getMessage());

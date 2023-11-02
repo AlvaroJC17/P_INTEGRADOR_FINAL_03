@@ -76,7 +76,7 @@ public class ControladorCliente {
 	          
 	            modelo.addAttribute("consulta", consulta);
 	        
-	        return "consulta_paciente.html";
+	        return "home.html";
 	    }
 
 }
