@@ -1,5 +1,4 @@
-package repositorios;
-
+package com.javabootcamp.proyecto_integrador3.Repositorios;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import entidades.Usuario;
+import com.javabootcamp.proyecto_integrador3.Entidades.Usuario;
 
 @Repository
 public interface RepositorioUsuario extends JpaRepository<Usuario, String>{
@@ -30,6 +29,6 @@ public interface RepositorioUsuario extends JpaRepository<Usuario, String>{
     public Optional<Usuario> buscarPorDniOptional(@Param("dni") String dni);
     
     @Query("SELECT u FROM Usuario u")
-    public List<Usuario> buscarUsuarios(); 
-
+    public List<Usuario> buscarUsuarios();
+    
 }

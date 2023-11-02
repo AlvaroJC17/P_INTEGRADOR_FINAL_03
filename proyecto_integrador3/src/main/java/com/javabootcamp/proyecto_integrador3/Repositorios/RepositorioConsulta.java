@@ -1,4 +1,4 @@
-package repositorios;
+package com.javabootcamp.proyecto_integrador3.Repositorios;
 
 import java.util.List;
 
@@ -7,9 +7,11 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import entidades.Cliente;
-import entidades.Consulta;
-import entidades.Profesional;
+import com.javabootcamp.proyecto_integrador3.Entidades.Cliente;
+import com.javabootcamp.proyecto_integrador3.Entidades.Consulta;
+import com.javabootcamp.proyecto_integrador3.Entidades.Profesional;
+
+
 
 @Repository
 public interface RepositorioConsulta extends JpaRepository<Consulta, String> {
@@ -27,5 +29,4 @@ public interface RepositorioConsulta extends JpaRepository<Consulta, String> {
 
 	@Query("SELECT DISTINCT(c.cliente) FROM Consulta c WHERE c.profesional.id = :id")
 	public List<Cliente> listarClientesPorProfesional(@Param("id") String id);
-
 }

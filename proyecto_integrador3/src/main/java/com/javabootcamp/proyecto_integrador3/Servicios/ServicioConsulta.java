@@ -1,4 +1,4 @@
-package servicios;
+package com.javabootcamp.proyecto_integrador3.Servicios;
 
 import java.util.List;
 import java.util.Optional;
@@ -7,12 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import entidades.Cliente;
-import entidades.Consulta;
-import entidades.Profesional;
-import repositorios.RepositorioCliente;
-import repositorios.RepositorioConsulta;
-import repositorios.RepositorioProfesional;
+import com.javabootcamp.proyecto_integrador3.Entidades.Cliente;
+import com.javabootcamp.proyecto_integrador3.Entidades.Consulta;
+import com.javabootcamp.proyecto_integrador3.Entidades.Profesional;
+import com.javabootcamp.proyecto_integrador3.Repositorios.RepositorioCliente;
+import com.javabootcamp.proyecto_integrador3.Repositorios.RepositorioConsulta;
+import com.javabootcamp.proyecto_integrador3.Repositorios.RepositorioProfesional;
 
 @Service
 public class ServicioConsulta {
@@ -120,6 +120,4 @@ public class ServicioConsulta {
         }
     }*/
 
-  
-        
 }
