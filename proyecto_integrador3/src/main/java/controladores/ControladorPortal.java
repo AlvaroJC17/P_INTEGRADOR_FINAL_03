@@ -33,7 +33,7 @@ public class ControladorPortal {
 	        if (error != null) {
 	            modelo.put("error", "email y contraseña no coinciden");
 	        }
-	        return "index.html";
+	        return "home.html";
 	    }
 
 	    @GetMapping("/especialidades")

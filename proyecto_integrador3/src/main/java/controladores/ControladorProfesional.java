@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
+//import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,12 +21,14 @@ import enums.Provincias;
 import enums.Sexo;
 import enums.Tratamiento;
 import jakarta.servlet.http.HttpSession;
+import repositorios.RepositorioProfesional;
+import repositorios.RepositorioUsuario;
 import servicios.ServicioProfesional;
 import servicios.ServicioUsuario;
 
 @Controller
 @RequestMapping("/profesional")
-@PreAuthorize("hasAnyRole('ROLE_PROFESIONAL')")
+//@PreAuthorize("hasAnyRole('ROLE_PROFESIONAL')")
 public class ControladorProfesional {
 
 	    @Autowired
@@ -34,6 +36,12 @@ public class ControladorProfesional {
 
 	    @Autowired
 	    private ServicioUsuario servicioUsuario;
+	    
+	    @Autowired
+	    private RepositorioUsuario repositorioUsario;
+	    
+	    @Autowired
+	    private RepositorioProfesional repositorioProfesional;
 
 
 	    @GetMapping("/perfil")
@@ -90,13 +98,15 @@ public class ControladorProfesional {
 	            Profesional profesional = (Profesional) session.getAttribute("usuariosession");
 	            servicioProfesional.modificarProfesional(profesional, nombre, apellido, sexo, dataFormateada, domicilio,
 	                    dni, provincia, matricula, tratamientos, email, disponibilidad);
-	            servicioUsuario.loadUserByUsername(profesional.getDni());
+	           // servicioUsuario.loadUserByUsername(profesional.getDni());
+	            repositorioProfesional.buscarPorDni(dni);
 	            
 	        } else if (session.getAttribute("usuariosession") instanceof Usuario) {
 	            Usuario usuario = (Usuario) session.getAttribute("usuariosession");
 	            servicioProfesional.guardarProfesional(nombre, apellido, sexo, dataFormateada, domicilio, dni,
 	                    provincia, matricula, tratamientos, disponibilidad, usuario);
-	            servicioUsuario.loadUserByUsername(usuario.getDni());
+	            //servicioUsuario.loadUserByUsername(usuario.getDni());
+	            repositorioUsario.findById(dni);
 	        }
 	        return "redirect:/";
 	    }

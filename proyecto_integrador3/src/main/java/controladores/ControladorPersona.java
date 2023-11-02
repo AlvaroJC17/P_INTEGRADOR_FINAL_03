@@ -5,7 +5,7 @@ import java.awt.PageAttributes.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
+//import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,7 +27,7 @@ public class ControladorPersona {
 	    private ServicioProfesional servicioProfesional;
 	   
 	    @GetMapping("/datos")
-	    @PreAuthorize("hasAnyRole('ROLE_PACIENTE', 'ROLE_PROFESIONAL')")
+	   // @PreAuthorize("hasAnyRole('ROLE_PACIENTE', 'ROLE_PROFESIONAL')")
 	    public String vistaDatosPerfil(HttpSession session, ModelMap modelo) {
 
 	        modelo.put("sexos", Sexo.values());

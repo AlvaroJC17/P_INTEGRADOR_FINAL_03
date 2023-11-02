@@ -4,13 +4,14 @@
 
 
 
-h3 {
+h1, h2, h3, h4 {
     /*Le asigna por defecto un tamaño de letra y un grosor a los titulos H3*/
     font-size: 80px;
     font-weight: 100;
+    color: #78340f !important;
 }
 
-a {
+a, p, label {
     /* Para cambiar el color y quitar la decoracion de los todos los link de la pagina*/
     color: #78340f !important;
     text-decoration: none;
@@ -113,10 +114,6 @@ nav {
     background-image: linear-gradient(to left, #d4af37, #724921);
 }
 
-.texto-label {
-    /*Le da estilo a los texto arriba de los imput en la parte de comentarios del footer, en este caso pega el texto de la barra del imput*/
-    margin-bottom: 0px !important;
-}
 .imagen-logo {
     /*Centra la imagen pequeña del logo del menu cuando esta en el tamaño mas pequeño de pantalla*/
     display: flex;
@@ -243,6 +240,19 @@ nav {
     margin: 15px;
 }
 
+/*------- FOOTER GENERAL MENOS EL DE INDEX ---------*/
+.contenedor-logo-final-general {
+    text-align: center;
+    border-top: 1px solid;
+     margin-top: 0px; 
+    padding-top: 0px;
+     padding-bottom: 0px;
+}
+
+.img-logo-final-general {
+    width: 70px;
+}
+
 /*---------- FOOTER ----------*/
 footer {
     /*Le da el color degradado al footer, el ancho y los maregenes*/
@@ -251,6 +261,7 @@ footer {
     bottom: 0;
     margin: 0px 0px 0px 0px !important;
 }
+
 .divfooter {
     /*Le da estilos a las colummnas del footer, en este caso, la raya de separacion y una separacion arriba*/
     border-right: 1px solid #724921;
@@ -311,18 +322,12 @@ footer {
 }
 
 .main-home{
-    /*Le da altura al main y ajusta todo en el centro de la pagina*/
-    height: 80% !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /*Le da altura al main y ajusta todo en el centro de la pagina*/ 
+    padding: 70px 0px 70px 0px;
 }
 
-.body-home{
-    position: relative;
-    height: 100vh;
+.body-interno{
+    background-color:#ebdf9d ;
    }   
 
 .img-logo-nav {
@@ -330,20 +335,26 @@ footer {
     width: 70px;
     background-color: transparent;
     border-radius: 50%;
-
 }
-/*------ Contenido del body---------*/
+
+.ft .iconos{
+    height: 50px;
+    margin: 0;
+}
+
 .ft{
     /*Estilos de los cuadros de seleccion en el centro de la hoja, ademas de centar el texto*/
-    height: 180px;
-    width: 360px;
-    margin: 10px;
+    height: 235px;
+    width: 600px;
+    margin: 21px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
     font-size: 30px;
     background-color: #ebdf9d;
+    border: 2px solid white;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.500);
 }
 
 .container{
@@ -363,15 +374,28 @@ footer {
     color: #c59b2d;
 }
 
-/*------ FOOTER DE LOS USUARIOS REGISTRADOS*/
-
-.footer-home {
+.footer-home-home {
     /*Le da el color degradado al footer, el ancho y los maregenes*/
     background-image: linear-gradient(to right, #d4af37, #724921);
     width: 100%;
     bottom: 0;
     margin: 0px 0px 0px 0px !important;
-    position: absolute;
+    
+}
+
+
+/*------ FOOTER DE LOS USUARIOS REGISTRADOS*/
+
+.footer-general {
+    /*Le da el color degradado al footer, el ancho y los maregenes*/
+    background-image: linear-gradient(to right, #d4af37, #724921);
+    width: 100%;
+    bottom: 0;
+    margin: 0px 0px 0px 0px !important;
+}
+
+.texto-registrarse .text-center{
+    font-size: 25px;
 }
 
 .contenedor-logo-final-home{
@@ -380,17 +404,11 @@ footer {
 }
 
 .img-logo-final-home{
-    /*Estilos al ultimo logo del footer*/
-    border-radius: 50%;
-    width: 50px;
+    /*Estilos al ultimo logo del footer*/     /*modificar para mediea********************************/
+    width: 100px;
 }
 
   /*----- PAGINA LOGIN ---------*/
-
-  .body-login{
-    height: 100vh;
-    position: relative;
-  }
 
   .texto-recuperar1{
     margin-top: 15px;
@@ -414,11 +432,10 @@ footer {
   }
 
   .main-login{
-    padding-top: 70px;
-    padding-bottom: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 50px 0px 50px 0px;
   }
 
   .imagen-formulario-login{
@@ -436,7 +453,7 @@ footer {
     width: 400px;
     height: 700px;
     background: #db9e42;
-    color: #fff;
+    color: black;
     box-sizing: border-box;
     padding: 70px 30px;
     margin: 0px 0px 0px 0px;
@@ -477,11 +494,11 @@ footer {
   
   .login-box input[type="text"], .login-box input[type="password"] {
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid black;
     background: transparent;
     outline: none;
     height: 40px;
-    color: #fff;
+    color: black;
     font-size: 16px;
   }
   
@@ -515,8 +532,8 @@ footer {
   /*PAGINA DE REGISTRO DE USUARIOS*/
 
   .main-registrarse-2{
-    padding-bottom: 60px;
-    padding-top: 60px;
+    padding-bottom: 35px;
+    padding-top: 35px;
 }
 
 .texto-label{
@@ -547,7 +564,7 @@ footer {
 
 /*BOTON DE FORM REGISTRARSE*/
 .bn632-hover {
-    width: 300px;
+    width: 280px;
     font-size: 16px;
     font-weight: 600;
     color: #fff;
@@ -629,33 +646,188 @@ footer {
     box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
   }
 
+  /*-----------  PAGINA MIS DATOS -----------*/
+.main-misdatos{
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+  .body-misdatos{
+    background-color:#ebdf9d ;
+  }
+  .section-misdatos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-misdatos{
+    width: 80%;
+    background-color:#ebdf9d ;
+    margin: 70px 10px 50px 10px;
+    border-radius: 20px;
+    padding: 30px 30px 30px 30px;
+  }
+
+  .form-misdatos .form-control {
+    border-radius: 0px !important;
+  }
+
+  .form-misdatos h4{
+    font-size: 60px;
+    margin-bottom: 30px;
+    padding-left: 12px;
+  }
+  .form-misdatos .text-center{
+    font-size: 20px;
+  }
+
+  .footer-misdatos {
+    /*Le da el color degradado al footer, el ancho y los maregenes*/
+    background-image: linear-gradient(to right, #d4af37, #724921);
+    width: 100%;
+    bottom: 0;
+    margin: 0px 0px 0px 0px !important;
+    position: absolute;
+}
+
 /*-------- MEDIAS PARA RESPONSIVE ---------*/
 
+@media(max-width: 1440px){
 
+    .titulos-footer-general {
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+
+    .section-registrarse {
+        width: 100%;
+    }
+
+    .bn632-hover {
+        font-size: 25px;
+        
+    }
+    .container{
+        margin-bottom: 65px;
+    }
+
+    .form-misdatos h4{
+        font-size: 60px;
+        margin-bottom: 40px;
+        padding-left: 0px;
+        text-align: center;
+      }
+
+    .footer-misdatos{
+        position: static;
+    }
+
+    .form-misdatos{
+        width: 95%;
+        margin: 5px;
+        padding: 10px;
+      }
+
+      .form-misdatos .bn632-hover{
+        margin-top: 10px;
+        height: 60px;
+        width: 40%;
+      }
+
+      .form-misdatos .text-center{
+        font-size: 25px;
+        margin-top: 15px;
+      }
+
+      .texto-label {
+        font-size: 25px;
+        margin-bottom: 0px;
+    }
+ 
+    .main-home{
+        /*Le da altura al main y ajusta todo en el centro de la pagina*/ 
+        padding: 45px 0px 45px 0px;
+    }
+
+    .ft .iconos{
+        height: 30px;
+        margin: 0;
+    }
+}
 
 @media(max-width: 1280px){
+
+    .form-misdatos h4 {
+        font-size: 50px;
+        margin-bottom: 20px;
+        padding-left: 12px;
+        text-align: start;
+    }
+
+    .main-misdatos{
+        padding-top: 0px;
+        padding-bottom: 50px;
+      
+      }
+
+    .form-misdatos .text-center {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .form-misdatos .bn632-hover {
+        margin-top: 10px;
+        height: 50px;
+        width: 20%;
+        font-size: 18px;
+    }
+    
+    .titulos-footer-general {
+        font-size: 21px;
+        text-decoration: underline;
+    }
+
+   div .form-control .footer-interno{
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 0.5;
+    }
+
+    div .areatexto{
+        line-height: 1.2 !important;
+    }
+
+    .iconos2 {
+        width: 80%;
+    }
+
+    .main-home{
+        padding: 15px 0px 15px 0px;
+    }
+
+    .container {
+        margin-bottom: 0px;
+    }
+
+    .ft {
+        height: 200px;
+        width: 400px;
+      
+    }
     
     .main-registrarse-2{
         padding-bottom: 50px;
     }
 
-    .body-login{
-        position: relative;
-        padding-bottom: 50px;
-        height: 100%;
-      }
-
    .body-home{
     position: relative;
     padding-bottom: 50px;
     height: 100vh;
-   }   
-
-    .main-home{
-        /*Le da altura al main y ajusta todo en el centro de la pagina*/
-        height: auto !important;
-       
-    }
+   } 
 
     .bn632-hover-login {
         width: 200px;
@@ -671,21 +843,23 @@ footer {
       }
 
     .texto-recuperar1 .texto{
-        font-size: 15px;
+        font-size: 18px;
     }
 
     .texto-recuperar2 .texto{
-        font-size: 15px;
+        font-size: 18px;
     }
-
+    
     .texto-recuperar1{
         margin-top: 15px;
         text-align: center;
-          }
-           .texto-recuperar2{
-            text-align: center;
-            margin-top: 10px;
-          }
+    }
+     
+    .texto-recuperar2{
+        text-align: center;
+        margin-top: 10px;
+    }
+
     .bn632-hover-login {
         margin: 10px
       }
@@ -698,29 +872,24 @@ footer {
         height: 500px;
         width: 320px;
       }
-    
+      
       .login-box {
         width: 320px;
         height: 500px;
-    }
+    }  
         
   .login-box h1 {
-    font-size: 22px;
+    font-size: 27px;
   }
   
   .login-box label {
-  font-size: 17px;
+  font-size: 20px;
   }
-      
-
-    .titulos-footer {
-        /*Le da tamaños a los titulos de que estan en el footer*/
-        font-size: 45px;
-    }
+   
 
     h3 {
         /*Disminuyr el tamaño de la letra h3 y le da grosor*/
-        font-size: 60px;
+        font-size: 40px;
         font-weight: 100;
     }
 
@@ -732,26 +901,32 @@ footer {
 
 
 @media(max-width: 992px) {
+
+    .form-misdatos h4 {
+        margin-bottom: 40px;
+        text-align: center;
+      
+    }
+
+    .form-misdatos .text-center {
+        margin-top: 0px;
+        font-size: 20px;
+    }
+
+    .texto-label {
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+  
     .navbar4 {
         /*Le da estilos a la lista del menu, tamaño de letra, centrado y grosor de letra*/
         font-size: 11px !important;
     }
   
-    .ft {
-        height: 100px;
-        width: 360px;
-        font-size: 20px;
-    }
-
-    .main-home{
-        margin: 0px;
-    }
-       
-    
-  
 }
 
 @media(max-width: 767px) {
+  
     .cabecera {
         /*Posiciona los botones de login y registrase en el menu princial aarriba y a la derecha*/
         align-items: start !important;
@@ -818,11 +993,22 @@ footer {
     .imagen-formulario-login{
         display: none;
     }
+   
 
  
 }
 
 @media(max-width: 576px) {
+
+    .form-misdatos .bn632-hover {
+        width: 35%;
+    }
+
+    .ft {
+        height: 200px;
+        width: 360px;
+        font-size: 20px;
+    }
     .header-flex {
         /*Posciona el logo principal encima del titulo principal para este tamaño de pantalla! NO BORRAR! */
         display: block;
@@ -867,16 +1053,31 @@ footer {
         width: 21rem !important;
     }
 
-    .section-registrarse{
-        width: 100%;
-        margin: 10px;
-        
-    }
+    .form-misdatos{
+        background-color:#ebdf9d ;
+        margin-top: 10px;
+        padding: 5px 5px 5px 5px;
+    
+      }
+    
+    
        
       
 }
 
 @media (max-width: 400px) {
+    
+    .ft {
+        height: 150px;
+        width: 360px;
+        font-size: 20px;
+    }
+
+    .form-misdatos .bn632-hover {
+        margin-top: 10px;
+        height: 50px;
+        width: 80%;
+    }
 
     .bn632-hover {
         width: 180px;
@@ -953,18 +1154,6 @@ footer {
         width: 15rem !important;
     }
 
-    .ft{
-        height: 100px;
-        width: 200px;
-        font-size: 20px;
-    }
-
-    .main-home{
-        height: auto;
-        margin-top: 10px;
-        
-    }
-
     .img-logo{
         margin-left: 0px;
     }
@@ -1002,5 +1191,24 @@ footer {
         width: 100% !important;
       }
       
+      .form-misdatos h4{
+        font-size: 40px;
+      }
+
       
+      .footer-home-home {
+        /*Le da el color degradado al footer, el ancho y los maregenes*/
+        position: absolute;
+    }
+      
+.login-box {
+    width: 90%;
+    margin-left: 15px;
 }
+
+.form-misdatos .text-center {
+    font-size: 20px;
+}
+  
+}
+      

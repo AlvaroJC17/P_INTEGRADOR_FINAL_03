@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
+//import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -39,7 +39,7 @@ public class ControladorConsulta {
 	    @Autowired
 	    private ServicioCliente servicioCliente;
 
-	    @PreAuthorize("hasAnyRole('ROLE_PROFESIONAL')")
+	  //  @PreAuthorize("hasAnyRole('ROLE_PROFESIONAL')")
 	    @GetMapping("/paciente")
 	    public String pacientes(HttpSession session, ModelMap modelo) {
 	        Profesional profesional = (Profesional) session.getAttribute("usuariosession");
@@ -47,7 +47,7 @@ public class ControladorConsulta {
 	        return "pacientes_paso1.html";
 	    }
 
-	    @PreAuthorize("hasAnyRole('ROLE_PROFESIONAL')")
+	   // @PreAuthorize("hasAnyRole('ROLE_PROFESIONAL')")
 	    @GetMapping("/consultas")    
 	    public String listarConsultasPaciente(ModelMap modelo, @RequestParam String idPaciente){
 	        modelo.addAttribute("consulta", servicioConsulta.listarHistorial(idPaciente));
@@ -55,7 +55,7 @@ public class ControladorConsulta {
 	        return "pacientes_paso2.html";
 	    }
 
-	    @PreAuthorize("hasAnyRole('ROLE_PROFESIONAL')")
+	   // @PreAuthorize("hasAnyRole('ROLE_PROFESIONAL')")
 	    @GetMapping("/diagnostico")
 	    public String darDiagnostico(ModelMap modelo, @RequestParam String id, String diagnostico, @RequestParam String idPaciente) {
 	        System.out.println("diagnostico: " + diagnostico + " id consulta: " + id + " id paciente: " + idPaciente);
@@ -65,14 +65,14 @@ public class ControladorConsulta {
 	        return "pacientes_paso2.html";
 	    }
 
-	    @PreAuthorize("hasAnyRole('ROLE_PACIENTE')")
+	   // @PreAuthorize("hasAnyRole('ROLE_PACIENTE')")
 	    @GetMapping("/provincia")
 	    public String provincias(HttpSession session, ModelMap modelo) {
 	        modelo.put("provincias", servicioProfesional.listarProvincias());
 	        return "consulta_paso1.html";
 	    }
 
-	    @PreAuthorize("hasAnyRole('ROLE_PACIENTE')")
+	   // @PreAuthorize("hasAnyRole('ROLE_PACIENTE')")
 	    @GetMapping("/especialidad")
 	    public String especialidades(@RequestParam String provincia, HttpSession session, ModelMap modelo) {
 	        modelo.put("provincia", provincia);
@@ -80,7 +80,7 @@ public class ControladorConsulta {
 	        return "consulta_paso2.html";
 	    }
 
-	    @PreAuthorize("hasAnyRole('ROLE_PACIENTE')")
+	   // @PreAuthorize("hasAnyRole('ROLE_PACIENTE')")
 	    @GetMapping("/profesional")
 	    public String profesionales(@RequestParam String provincia, @RequestParam String especialidad, HttpSession session,
 	            ModelMap modelo) {
@@ -89,7 +89,7 @@ public class ControladorConsulta {
 	        return "consulta_paso3.html";
 	    }
 
-	    @PreAuthorize("hasAnyRole('ROLE_PACIENTE')")
+	   // @PreAuthorize("hasAnyRole('ROLE_PACIENTE')")
 	    @GetMapping("/disponibilidad")
 	    public String disponibilidadProfesional(@RequestParam String idProfesional, HttpSession session, ModelMap modelo) {
 	        Profesional profesional = servicioProfesional.getOne(idProfesional);
@@ -113,7 +113,7 @@ public class ControladorConsulta {
 	        return "consulta_paso4.html";
 	    }
 
-	    @PreAuthorize("hasAnyRole('ROLE_PACIENTE')")
+	   // @PreAuthorize("hasAnyRole('ROLE_PACIENTE')")
 	    @GetMapping("/horario")
 	    public String horarioProfesional(@RequestParam String idProfesional, @RequestParam String fecha,
 	            HttpSession session, ModelMap modelo) {
@@ -139,7 +139,7 @@ public class ControladorConsulta {
 	        return "consulta_paso5.html";
 	    }
 
-	    @PreAuthorize("hasAnyRole('ROLE_PACIENTE')")
+	   // @PreAuthorize("hasAnyRole('ROLE_PACIENTE')")
 	    @GetMapping("/reservar")
 	    public String reservar(@RequestParam String idProfesional, @RequestParam String fecha,
 	            @RequestParam Integer horario, HttpSession session, ModelMap modelo) {
@@ -148,7 +148,7 @@ public class ControladorConsulta {
 	        return "redirect:/";
 	    }
 
-	    @PreAuthorize("hasAnyRole('ROLE_PACIENTE')")
+	   // @PreAuthorize("hasAnyRole('ROLE_PACIENTE')")
 	    @GetMapping("/eliminar/{id}")
 	    public String eliminarConsulta(@PathVariable String id, Model modelo, HttpSession session) {
 	    	servicioConsulta.eliminar(id);

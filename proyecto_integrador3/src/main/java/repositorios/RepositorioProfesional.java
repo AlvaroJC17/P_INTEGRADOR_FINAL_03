@@ -38,6 +38,9 @@ public interface RepositorioProfesional extends JpaRepository<Profesional, Strin
 	    
 	    @Query("SELECT p FROM Profesional p WHERE p.id = :id")
 	    public Profesional buscarPorId(@Param("id") String id);
+	    
+	    @Query("SELECT p FROM Profesional p WHERE p.dni = :dni")
+	    public Profesional buscarPorDni(@Param("dni") String dni);
 
 	    @Query("SELECT COUNT(p) FROM Profesional p")
 	    public Integer contarProfesionales();

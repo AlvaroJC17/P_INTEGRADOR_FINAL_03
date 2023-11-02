@@ -1,13 +1,13 @@
 package servicios;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+//import org.springframework.security.core.GrantedAuthority;
+//import org.springframework.security.core.authority.SimpleGrantedAuthority;
+//import org.springframework.security.core.userdetails.User;
+//import org.springframework.security.core.userdetails.UserDetails;
+//import org.springframework.security.core.userdetails.UserDetailsService;
+//import org.springframework.security.core.userdetails.UsernameNotFoundException;
+//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -27,7 +27,7 @@ import jakarta.servlet.http.HttpSession;
 import repositorios.RepositorioUsuario;
 
 @Service
-public class ServicioUsuario implements UserDetailsService {
+public class ServicioUsuario /* implements UserDetailsService*/ {
 
 	@Autowired
 	public RepositorioUsuario repositorioUsuario; //Se instancia el repositorio usuarios para acceder a todos los metodos de JPA
@@ -45,7 +45,8 @@ public class ServicioUsuario implements UserDetailsService {
         Usuario usuario = new Usuario();
         usuario.setEmail(email);
         usuario.setDni(dni);
-        usuario.setPassword(new BCryptPasswordEncoder().encode(password));
+       // usuario.setPassword(new BCryptPasswordEncoder().encode(password));
+        usuario.setPassword(password);
         usuario.setActivo(TRUE); // el valor true se importa de un clase de java por eso no se crea un variable boolean
         usuario.setRol(Rol.PACIENTE); // este valor de rol.paciente se importa de los enum
         repositorioUsuario.save(usuario);
@@ -134,7 +135,8 @@ public class ServicioUsuario implements UserDetailsService {
 	            Usuario usuario = new Usuario();
 	            usuario.setEmail(email);
 	            usuario.setDni(dni);
-	            usuario.setPassword(new BCryptPasswordEncoder().encode(password));
+	           // usuario.setPassword(new BCryptPasswordEncoder().encode(password));
+	            usuario.setPassword(password);
 	            usuario.setActivo(TRUE);
 	            usuario.setRol(rol);
 	            repositorioUsuario.save(usuario);
@@ -178,7 +180,7 @@ public class ServicioUsuario implements UserDetailsService {
 	    	
 	    }
 
-	@Override //Autentica un usuario para spring security y verifica que en cada solicitud de ese usuario todavia tenga los permisos de acceso
+	/*@Override //Autentica un usuario para spring security y verifica que en cada solicitud de ese usuario todavia tenga los permisos de acceso
 	public UserDetails loadUserByUsername(String dni) throws UsernameNotFoundException {
 
 		 Usuario usuario = repositorioUsuario.buscarPorDni(dni);
@@ -198,6 +200,6 @@ public class ServicioUsuario implements UserDetailsService {
 	        HttpSession session = attr.getRequest().getSession(true);
 	        session.setAttribute("usuariosession", usuario);
 	        return new User(usuario.getDni(), usuario.getPassword(), permisos);
-	    }
+	    }*/
 
 }

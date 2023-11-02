@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
+//import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,7 +27,7 @@ public class ControladorAdmin {
     private ServicioUsuario servicioUsuario;
 
     @GetMapping("/dashboard")
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+   // @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     public String lista(ModelMap modelo) {
 
         List<Usuario> usuario = new ArrayList<>();
@@ -39,21 +39,21 @@ public class ControladorAdmin {
     }
 
     @GetMapping("/baja/{id}")
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+   // @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     public String bajaUsuario(@PathVariable String id, ModelMap modelo) {
     	servicioUsuario.darBaja(id);
         return "redirect:/admin/dashboard";
     }
 
     @GetMapping("/alta/{id}")
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+   // @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     public String altaUsuario(@PathVariable String id, ModelMap modelo) {
     	servicioUsuario.darAlta(id);
         return "redirect:/admin/dashboard";
     }
 
     @GetMapping("/buscar")
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+   // @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     public String buscarPorDni(String dni, ModelMap model) {
         Usuario usuario = repositorioUsuario.buscarPorDni(dni);
         model.addAttribute("usuarios", usuario);
@@ -62,7 +62,7 @@ public class ControladorAdmin {
     }
 
     @GetMapping("/rol/{dni}")
-    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+   // @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     public String cambiarRolUsuario(@PathVariable String dni, Rol rol, ModelMap model) {
     	servicioUsuario.modificarRol(rol, dni);
         return "redirect:/admin/dashboard";
