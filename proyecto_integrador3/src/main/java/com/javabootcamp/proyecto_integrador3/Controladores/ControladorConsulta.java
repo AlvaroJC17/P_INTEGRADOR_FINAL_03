@@ -17,12 +17,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.javabootcamp.proyecto_integrador3.Entidades.Cliente;
 import com.javabootcamp.proyecto_integrador3.Entidades.Consulta;
 import com.javabootcamp.proyecto_integrador3.Entidades.Profesional;
+import com.javabootcamp.proyecto_integrador3.Servicios.ServicioCliente;
+import com.javabootcamp.proyecto_integrador3.Servicios.ServicioConsulta;
+import com.javabootcamp.proyecto_integrador3.Servicios.ServicioProfesional;
 import com.javabootcamp.proyecto_integrador3.Utilidad.Dias;
 
 import jakarta.servlet.http.HttpSession;
-import servicios.ServicioCliente;
-import servicios.ServicioConsulta;
-import servicios.ServicioProfesional;
+
 
 @Controller
 @RequestMapping("/consulta")

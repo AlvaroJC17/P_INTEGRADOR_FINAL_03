@@ -9,9 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.javabootcamp.proyecto_integrador3.Entidades.Cliente;
 import com.javabootcamp.proyecto_integrador3.Entidades.Usuario;
 import com.javabootcamp.proyecto_integrador3.Enums.Sexo;
+import com.javabootcamp.proyecto_integrador3.Servicios.ServicioProfesional;
 
 import jakarta.servlet.http.HttpSession;
-import servicios.ServicioProfesional;
+
 
 @Controller
 @RequestMapping("/perfil")

@@ -19,12 +19,13 @@ import com.javabootcamp.proyecto_integrador3.Enums.Provincias;
 import com.javabootcamp.proyecto_integrador3.Enums.Sexo;
 import com.javabootcamp.proyecto_integrador3.Enums.Tratamiento;
 import com.javabootcamp.proyecto_integrador3.MiExcepcion.MiExcepcion;
+import com.javabootcamp.proyecto_integrador3.Repositorios.RepositorioProfesional;
+import com.javabootcamp.proyecto_integrador3.Repositorios.RepositorioUsuario;
+import com.javabootcamp.proyecto_integrador3.Servicios.ServicioProfesional;
+import com.javabootcamp.proyecto_integrador3.Servicios.ServicioUsuario;
 
 import jakarta.servlet.http.HttpSession;
-import repositorios.RepositorioProfesional;
-import repositorios.RepositorioUsuario;
-import servicios.ServicioProfesional;
-import servicios.ServicioUsuario;
+
 
 @Controller
 @RequestMapping("/profesional")

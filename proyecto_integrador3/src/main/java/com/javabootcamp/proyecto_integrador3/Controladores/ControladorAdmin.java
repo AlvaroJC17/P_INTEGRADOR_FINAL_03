@@ -12,9 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.javabootcamp.proyecto_integrador3.Entidades.Usuario;
 import com.javabootcamp.proyecto_integrador3.Enums.Rol;
-
-import repositorios.RepositorioUsuario;
-import servicios.ServicioUsuario;
+import com.javabootcamp.proyecto_integrador3.Repositorios.RepositorioUsuario;
+import com.javabootcamp.proyecto_integrador3.Servicios.ServicioUsuario;
 
 @Controller
 @RequestMapping("/admin")

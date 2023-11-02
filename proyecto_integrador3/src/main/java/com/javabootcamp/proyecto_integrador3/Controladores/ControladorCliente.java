@@ -16,12 +16,13 @@ import com.javabootcamp.proyecto_integrador3.Entidades.Cliente;
 import com.javabootcamp.proyecto_integrador3.Entidades.Consulta;
 import com.javabootcamp.proyecto_integrador3.Entidades.Usuario;
 import com.javabootcamp.proyecto_integrador3.Enums.Sexo;
+import com.javabootcamp.proyecto_integrador3.Repositorios.RepositorioUsuario;
+import com.javabootcamp.proyecto_integrador3.Servicios.ServicioCliente;
+import com.javabootcamp.proyecto_integrador3.Servicios.ServicioConsulta;
+import com.javabootcamp.proyecto_integrador3.Servicios.ServicioUsuario;
 
 import jakarta.servlet.http.HttpSession;
-import repositorios.RepositorioUsuario;
-import servicios.ServicioCliente;
-import servicios.ServicioConsulta;
-import servicios.ServicioUsuario;
+
 
 @Controller
 @RequestMapping("/paciente")
