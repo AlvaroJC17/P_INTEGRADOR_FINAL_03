@@ -16,7 +16,7 @@ public interface RepositorioConsulta extends JpaRepository<Consulta, String> {
 
 	@Query("SELECT c.fecha FROM Consulta c WHERE c.profesional = :profesional GROUP BY c.fecha HAVING COUNT(*) = :nTurnos")
 	public List<String> listarConsultasPorProfesionalAgrupadoPorFecha(@Param("profesional") Profesional profesional,
-			@Param("nTurnos") Long nTurnos);
+			@Param("nTurnos") Integer nTurnos);
 
 	@Query("SELECT c.horario FROM Consulta c WHERE (c.profesional = :profesional AND c.fecha = :fechaConsulta)")
 	public List<Integer> listarHorarioPorProfesionalPorFecha(@Param("profesional") Profesional profesional,

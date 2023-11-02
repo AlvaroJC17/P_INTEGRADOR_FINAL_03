@@ -12,7 +12,7 @@ public final class Cliente extends Persona {
 	private Integer edad;
 	
 	//Constructores
-	Cliente(){
+	public Cliente(){
 		
 	}
 

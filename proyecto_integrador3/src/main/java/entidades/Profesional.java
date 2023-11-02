@@ -31,6 +31,7 @@ public final class Profesional extends Persona {
 
 	public Profesional(String matricula, Tratamiento tratamiento, Disponibilidad disponibilidad, Provincias provincia, String nombre, String apellido, Sexo sexo, Date fechaNacimiento, String domicilio,
 			Integer telefono, String id, String dni, String email, String password, Rol rol, Boolean activo) {
+		
 		super(nombre, apellido, sexo, fechaNacimiento, domicilio, telefono, id, dni, email, password, rol, activo);
 		this.matricula = matricula;
 		this.tratamiento = tratamiento;

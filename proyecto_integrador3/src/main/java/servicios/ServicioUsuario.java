@@ -36,13 +36,15 @@ public class ServicioUsuario implements UserDetailsService {
 	
 	//Crear y guardar un usuario en la base de datos, despues de verificar sus credenciales
 	@Transactional
-    public void guardarUsuario(String email, String password, String password2) throws MiExcepcion {
+    public void guardarUsuario(String email, String password, String password2, String dni) throws MiExcepcion {
 
         verificarEmail(email); // primero verificamos que la contraseña cumpla las condiciones
         verificarPassword(password, password2); // Vericamos las condiciones del mail, no este vacio o que ya este registrado
-
+        verificarDni(dni); // verificamos el dni
+        
         Usuario usuario = new Usuario();
         usuario.setEmail(email);
+        usuario.setDni(dni);
         usuario.setPassword(new BCryptPasswordEncoder().encode(password));
         usuario.setActivo(TRUE); // el valor true se importa de un clase de java por eso no se crea un variable boolean
         usuario.setRol(Rol.PACIENTE); // este valor de rol.paciente se importa de los enum
@@ -50,7 +52,7 @@ public class ServicioUsuario implements UserDetailsService {
     }
 	
 	 @Transactional // se usa este marcador para hacer rollback, se usa en los metodos que impactan directo en la base de datos
-	    public void modificarUsuario(String email, String password, String password2, String id) throws MiExcepcion {
+	    public void modificarUsuario(String email, String password, String password2, String id, String dni) throws MiExcepcion {
 	        verificarPassword(password, password2);
 
 	        Optional<Usuario> presente = repositorioUsuario.findById(id); //Opcional puede devolver un valor o no, nos permite acceder al metodo isPresent
@@ -126,11 +128,12 @@ public class ServicioUsuario implements UserDetailsService {
 	    }
 	    
 	    @Transactional
-	    public void crearUsuario(String dni, String password, Rol rol) throws MiExcepcion {
+	    public void crearUsuario(String dni, String password, Rol rol, String email) throws MiExcepcion {
 	        Usuario presente = repositorioUsuario.buscarPorDni(dni); // Se busca por mail porque el usuario no tiene dni registrado en la clase
 	        if (presente == null) {
 	            Usuario usuario = new Usuario();
-	            usuario.setEmail(dni);
+	            usuario.setEmail(email);
+	            usuario.setDni(dni);
 	            usuario.setPassword(new BCryptPasswordEncoder().encode(password));
 	            usuario.setActivo(TRUE);
 	            usuario.setRol(rol);
@@ -163,6 +166,17 @@ public class ServicioUsuario implements UserDetailsService {
 		}
 		return true;
 	}
+	
+	 public void verificarDni(String dni) throws MiExcepcion{
+	    	if (repositorioUsuario.buscarPorDniOptional(dni).isPresent()) {
+				throw new MiExcepcion("Erro, el dni ya se encuentra registrado");
+			}
+	    	
+	    	if (dni == null || dni.isEmpty() || dni.trim().isEmpty()) {
+	    		throw new MiExcepcion("Error, el dni no puede estar vacio");
+			}
+	    	
+	    }
 
 	@Override //Autentica un usuario para spring security y verifica que en cada solicitud de ese usuario todavia tenga los permisos de acceso
 	public UserDetails loadUserByUsername(String dni) throws UsernameNotFoundException {

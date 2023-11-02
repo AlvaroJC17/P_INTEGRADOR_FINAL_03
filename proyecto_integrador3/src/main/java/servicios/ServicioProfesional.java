@@ -54,7 +54,7 @@ public class ServicioProfesional {
 	        profesional.setSexo(sexo);
 	        profesional.setProvincia(provincia);
 	        profesional.setTratamiento(tratamientos);
-	        profesional.setDisponibilidad(servicioDisponibilidad.guardar(disponibilidad));
+	        profesional.setDisponibilidad(servicioDisponibilidad.guardar(disponibilidad)); // se llama al metodo guardar del repositorio y se setea en el profesional
 	        repositorioProfesional.save(profesional); // Guarda el nuevo profesional en la base de datos
 
 	        servicioUsuario.eliminarUsuario(usuario.getId()); // Como este usuario ya es profesional, entonces se elimina de la base de datos
@@ -63,7 +63,7 @@ public class ServicioProfesional {
 	 @Transactional
 	    public void modificarProfesional(Profesional profesional, String nombre, String apellido,
 	            Sexo sexo, Date fechaNacimiento, String domicilio, String dni,
-	            Provincias provincia, String matricula, Tratamiento tratamientos, Disponibilidad disponibilidad)
+	            Provincias provincia, String matricula, Tratamiento tratamientos, String email, Disponibilidad disponibilidad)
 	            throws MiExcepcion {
 
 	        Optional<Profesional> respuesta = repositorioProfesional.findById(profesional.getId());
@@ -77,6 +77,7 @@ public class ServicioProfesional {
 	            nuevo_profesional.setDomicilio(domicilio);
 	            nuevo_profesional.setFechaNacimiento(fechaNacimiento);
 	            nuevo_profesional.setDni(dni);
+	            nuevo_profesional.setEmail(email);
 	            nuevo_profesional.setDisponibilidad(disponibilidad);
 	            nuevo_profesional.setTratamiento(tratamientos);
 	            nuevo_profesional.setMatricula(matricula);
@@ -154,22 +155,22 @@ public class ServicioProfesional {
 	            return provincias;
 	        }
 
-	      /*  @Transactional()
+	       @Transactional()
 	        public List<String> listarEspecialidadesPorProvincia(String provincia) {
 	            List<String> especialidades = new ArrayList();
 	            Provincias prov = Provincias.valueOf(provincia);
 	            especialidades = repositorioProfesional.listarEspecialidadesPorProvincia(prov);
 	            return especialidades;
-	        }*/
+	        }
 
-	      /*  @Transactional()
+	       @Transactional()
 	        public List<Profesional> listarProfesionalPorEspecialidadesPorProvincia(String provincia, String tratamientos) {
 	            List<Profesional> profesionales = new ArrayList();
 	            Provincias prov = Provincias.valueOf(provincia);
 	            Tratamiento tra = Tratamiento.valueOf(tratamientos);
 	            profesionales = repositorioProfesional.listarProfesionalPorEspecialidadesPorProvincia(prov, tra);
 	            return profesionales;
-	        }*/
+	        }
 
 	        public Profesional getOne(String id) {
 	            return repositorioProfesional.getById(id);
