@@ -1,25 +1,25 @@
-package controladores;
+package com.javabootcamp.proyecto_integrador3.Controladores;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import Excepciones.MiExcepcion;
-import entidades.Disponibilidad;
-import entidades.Profesional;
-import entidades.Usuario;
-import enums.DiasDeLaSemana;
-import enums.Provincias;
-import enums.Sexo;
-import enums.Tratamiento;
+import com.javabootcamp.proyecto_integrador3.Entidades.Disponibilidad;
+import com.javabootcamp.proyecto_integrador3.Entidades.Profesional;
+import com.javabootcamp.proyecto_integrador3.Entidades.Usuario;
+import com.javabootcamp.proyecto_integrador3.Enums.DiasDeLaSemana;
+import com.javabootcamp.proyecto_integrador3.Enums.Provincias;
+import com.javabootcamp.proyecto_integrador3.Enums.Sexo;
+import com.javabootcamp.proyecto_integrador3.Enums.Tratamiento;
+import com.javabootcamp.proyecto_integrador3.MiExcepcion.MiExcepcion;
+
 import jakarta.servlet.http.HttpSession;
 import repositorios.RepositorioProfesional;
 import repositorios.RepositorioUsuario;
@@ -31,7 +31,7 @@ import servicios.ServicioUsuario;
 //@PreAuthorize("hasAnyRole('ROLE_PROFESIONAL')")
 public class ControladorProfesional {
 
-	    @Autowired
+	 @Autowired
 	    private ServicioProfesional servicioProfesional;
 
 	    @Autowired
@@ -110,6 +110,5 @@ public class ControladorProfesional {
 	        }
 	        return "redirect:/";
 	    }
-	
 	
 }

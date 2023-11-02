@@ -1,11 +1,10 @@
-package controladores;
+package com.javabootcamp.proyecto_integrador3.Controladores;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,10 +12,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import entidades.Cliente;
-import entidades.Consulta;
-import entidades.Usuario;
-import enums.Sexo;
+import com.javabootcamp.proyecto_integrador3.Entidades.Cliente;
+import com.javabootcamp.proyecto_integrador3.Entidades.Consulta;
+import com.javabootcamp.proyecto_integrador3.Entidades.Usuario;
+import com.javabootcamp.proyecto_integrador3.Enums.Sexo;
+
 import jakarta.servlet.http.HttpSession;
 import repositorios.RepositorioUsuario;
 import servicios.ServicioCliente;
@@ -26,8 +26,8 @@ import servicios.ServicioUsuario;
 @Controller
 @RequestMapping("/paciente")
 public class ControladorCliente {
-	
-	    @Autowired
+
+	 @Autowired
 	    private ServicioCliente servicioCliente;
 	    
 	    @Autowired

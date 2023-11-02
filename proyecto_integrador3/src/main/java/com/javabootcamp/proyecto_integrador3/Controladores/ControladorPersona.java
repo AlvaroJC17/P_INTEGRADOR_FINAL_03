@@ -1,21 +1,15 @@
-package controladores;
-
-import java.awt.PageAttributes.MediaType;
+package com.javabootcamp.proyecto_integrador3.Controladores;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.ResponseEntity;
-//import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import entidades.Cliente;
-import entidades.Persona;
-import entidades.Profesional;
-import entidades.Usuario;
-import enums.Sexo;
+import com.javabootcamp.proyecto_integrador3.Entidades.Cliente;
+import com.javabootcamp.proyecto_integrador3.Entidades.Usuario;
+import com.javabootcamp.proyecto_integrador3.Enums.Sexo;
+
 import jakarta.servlet.http.HttpSession;
 import servicios.ServicioProfesional;
 
@@ -23,7 +17,7 @@ import servicios.ServicioProfesional;
 @RequestMapping("/perfil")
 public class ControladorPersona {
 
-	    @Autowired
+	 @Autowired
 	    private ServicioProfesional servicioProfesional;
 	   
 	    @GetMapping("/datos")

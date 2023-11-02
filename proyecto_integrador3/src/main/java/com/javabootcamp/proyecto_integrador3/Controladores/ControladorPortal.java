@@ -1,20 +1,17 @@
-package controladores;
-
-import java.util.List;
+package com.javabootcamp.proyecto_integrador3.Controladores;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import Excepciones.MiExcepcion;
-import entidades.Cliente;
-import entidades.Profesional;
-import enums.Tratamiento;
+import com.javabootcamp.proyecto_integrador3.Entidades.Cliente;
+import com.javabootcamp.proyecto_integrador3.Entidades.Profesional;
+import com.javabootcamp.proyecto_integrador3.MiExcepcion.MiExcepcion;
+
 import jakarta.servlet.http.HttpSession;
 import servicios.ServicioProfesional;
 import servicios.ServicioUsuario;
@@ -22,8 +19,8 @@ import servicios.ServicioUsuario;
 @Controller
 @RequestMapping("/")
 public class ControladorPortal {
-	
-	    @Autowired
+
+	  @Autowired
 	    private ServicioUsuario servicioUsuario;
 	    @Autowired
 	    private ServicioProfesional servicioProfesional;
@@ -112,5 +109,4 @@ public class ControladorPortal {
 
 	    }
 	
-
 }
