@@ -15,7 +15,7 @@ public interface RepositorioDisponibilidad extends JpaRepository<Disponibilidad,
 	
 	//public List<Disponibilidad> findAll(); // no hace falta colocarlo aqui, puedo invocar este metodo directamente en el controlador
 	
-	@Query("SELECT d FROM Consulta d WHERE d.disponibilidad.id = :id")
-	public List<Disponibilidad> buscarDisponibilidadPorId(@Param("id") String id);
+	//@Query("SELECT d FROM Consulta d WHERE d.disponibilidad.id = :id")
+	//public List<Disponibilidad> buscarDisponibilidadPorId(@Param("id") String id);
 
 }

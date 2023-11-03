@@ -11,8 +11,6 @@ import com.javabootcamp.proyecto_integrador3.Entidades.Cliente;
 import com.javabootcamp.proyecto_integrador3.Entidades.Consulta;
 import com.javabootcamp.proyecto_integrador3.Entidades.Profesional;
 
-
-
 @Repository
 public interface RepositorioConsulta extends JpaRepository<Consulta, String> {
 
@@ -29,4 +27,5 @@ public interface RepositorioConsulta extends JpaRepository<Consulta, String> {
 
 	@Query("SELECT DISTINCT(c.cliente) FROM Consulta c WHERE c.profesional.id = :id")
 	public List<Cliente> listarClientesPorProfesional(@Param("id") String id);
+	
 }

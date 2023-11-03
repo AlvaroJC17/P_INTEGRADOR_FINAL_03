@@ -1,14 +1,12 @@
 package com.javabootcamp.proyecto_integrador3.Entidades;
 
-
-
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
+
 @Entity
 public class Consulta {
 

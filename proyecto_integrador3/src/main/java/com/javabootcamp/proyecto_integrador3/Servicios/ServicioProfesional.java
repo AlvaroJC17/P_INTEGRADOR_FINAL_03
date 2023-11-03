@@ -126,7 +126,7 @@ public class ServicioProfesional {
 
 	public List<Profesional> listarPorEspecialidad(Tratamiento tratamientos) {
 		List<Profesional> profesionales = new ArrayList();
-		profesionales = repositorioProfesional.buscarPorEspecialidad(tratamientos);
+		profesionales = repositorioProfesional.buscarPorTratamiento(tratamientos);
 		return profesionales;
 	}
 
@@ -167,7 +167,7 @@ public class ServicioProfesional {
 	public List<String> listarEspecialidadesPorProvincia(String provincia) {
 		List<String> especialidades = new ArrayList();
 		Provincias prov = Provincias.valueOf(provincia);
-		especialidades = repositorioProfesional.listarEspecialidadesPorProvincia(prov);
+		especialidades = repositorioProfesional.listarTratamientoPorProvincia(prov);
 		return especialidades;
 	}
 
@@ -176,7 +176,7 @@ public class ServicioProfesional {
 		List<Profesional> profesionales = new ArrayList();
 		Provincias prov = Provincias.valueOf(provincia);
 		Tratamiento tra = Tratamiento.valueOf(tratamientos);
-		profesionales = repositorioProfesional.listarProfesionalPorEspecialidadesPorProvincia(prov, tra);
+		profesionales = repositorioProfesional.listarProfesionalPorTratamientoPorProvincia(prov, tra);
 		return profesionales;
 	}
 
