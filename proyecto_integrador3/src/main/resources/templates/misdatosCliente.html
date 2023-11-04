@@ -8,9 +8,10 @@
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="stylesheet" href="./css/styles.css">
-        <title>Solicitar Turno</title>
+        <title>Datos Cliente</title>
       </head>
-<body>
+<body class="body-misdatos">
+
   <a href="#" target="_blank" class="boton-flotante">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
@@ -60,10 +61,70 @@
     </div>
   </nav>
 </nav>
-  <main>
-    <p>SOLICITAR TURNO</p>
+
+<main class="main-misdatos">
+    <section class=" section-misdatos">
+      <div class="container-fluid form-misdatos ">
+        <form action="action">
+          <div>
+            <h4 class="">Datos personales</h4>
+          </div>
+          <div class="row">
+          <div class="mb-3 col-lg-4">
+            <label for="nombre" class="form-label texto-label" disabled >Nombre</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Nombre" disabled >
+          </div>
+          <div class="mb-3 col-lg-4">
+            <label for="apellido" class="form-label texto-label">Apellido</label>
+            <input type="text" class="form-control" id="apellido" placeholder="Apellido" disabled >
+          </div>
+          <div class="mb-3 col-lg-4">
+            <label for="dni" class="form-label texto-label">DNI</label>
+            <input type="number" class="form-control" id="dni" placeholder="123456789" disabled >
+          </div>
+        </div>
+        <div class="row">
+          <div class="mb-3 col-lg-6 ">
+            <label for="nacimiento" class="form-label texto-label">Fecha Nacimiento</label>
+            <input type="date" class="form-control" id="nacimiento" placeholder="Fecha Nacimineto" disabled>
+          </div>
+          <div class="mb-3 col-lg-6 ">
+            <label for="edad" class="form-label texto-label">Edad</label>
+            <input type="number" class="form-control" id="edad" placeholder="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="mb-3 col-lg-6">
+            <label for="email" class="form-label texto-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="">
+          </div>
+          <div class="mb-3 col-lg-6">
+            <label for="direccion" class="form-label texto-label">Direccion</label>
+            <input type="text" class="form-control" id="direccion" placeholder="">
+          </div>
+        </div>
+        <div class="row ">
+          <div class="mb-3 col-lg-6">
+            <label for="sexo" class="form-label texto-label">Sexo</label>
+            <input type="text" class="form-control" id="sexo" placeholder="">
+          </div>
+          <div class="mb-3 col-lg-6">
+            <label for="telefono" class="form-label texto-label">Telefono</label>
+            <input type="number" class="form-control" id="telefono" placeholder="">
+          </div>
+        </div>
+        <div class="boton-de-registro text-center">
+          <a href="#"><button class="bn632-hover bn26">Guardar</button></a>
+        </div>
+        <div class="text-center mt-2 ">
+          <a class="m-2 " href="">¿Olvido su contraseña?</a>
+        </div>
+        </form>
+      </div>
+    </section>
   </main>
 
+    
   <footer class="d-flex row p-0">
     <div class="divfooter col-lg-4">
       <p class="mb-3 text-center titulos-footer-general">CONTACTOS</p>

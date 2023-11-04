@@ -299,7 +299,7 @@ footer {
 .img-logo-final{
     /*Estilos al ultimo logo del footer*/
     border-radius: 50%;
-    width: 150px;
+    width: 100px;
 }
 
 .diseñado{
@@ -405,7 +405,7 @@ footer {
 
 .img-logo-final-home{
     /*Estilos al ultimo logo del footer*/     /*modificar para mediea********************************/
-    width: 100px;
+    width: 80px;
 }
 
   /*----- PAGINA LOGIN ---------*/
@@ -463,11 +463,11 @@ footer {
   }
   
   .login-box .avatar {
-    width: 100px;
-    height: 100px;
+    width: 89px;
+    height: 84px;
     border-radius: 50%;
     position: absolute;
-    top: -50px;
+    top: 5px;
     left: calc(50% - 50px);
   }
   
@@ -540,13 +540,14 @@ footer {
     font-size: 17px;
     margin-bottom: 0px;
 }
-  .section-registrarse{
+
+.section-completar-datos{
     border-radius: 40px 0px 40px 0px;
     background-color: #db9e42;
     box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.500);
     width: 70%;
     margin: 30px
-  }
+}
 
 .img-registrarse{
     background-image: url(../imagenes/istockphoto-968940310-1024x1024.jpg);
@@ -562,15 +563,15 @@ footer {
 
 /*------- DISEÑO BOTONES ------*/
 
-/*BOTON DE FORM REGISTRARSE*/
+/*BOTON DE FORM COMPLETAR DATOS*/
 .bn632-hover {
-    width: 280px;
-    font-size: 16px;
+    width: 70%;
+    font-size: 18px !important;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
     margin: 20px;
-    height: 50px;
+    height: 45px;
     text-align:center;
     border: none;
     background-size: 300% 100%;
@@ -758,6 +759,90 @@ footer {
 
 @media(max-width: 1280px){
 
+    .form-select .select-tabla{
+        width: 140px !important;
+    }
+
+    .table{
+        width: 90%;
+    }
+
+    .fila-tabla-select{
+        width: 160px !important;
+        
+    }
+
+    .fila-tabla-select .form-select{
+        background-color: greenyellow;
+    }
+
+    .filas-tabla-baja{
+        width: 101px !important;
+    }
+
+    .main-turnos{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .form-check .form-check-input {
+        margin-top: 18px;
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin-left: -30px;
+    
+    }
+  
+    .info-silicitar-turno{
+        border-left: 1px solid white;
+    }
+    
+    .info-silicitar-turno .img-logo-final-home{
+        width: 80px;
+    }
+    
+    .texto-solicitar-turno p{
+        font-size: 18px;
+        text-align: center;
+    }
+.ft-reserva-turno{
+    /*Estilos de los cuadros de seleccion en el centro de la hoja, ademas de centar el texto*/
+    height: auto;
+    width: 750px;
+    margin: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px 0px 40px 0px;
+    font-size: 30px;
+    background-color: #ebdf9d;
+    border: 2px solid white;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.500);
+    padding: 15px 0px 15px 0px;
+}
+
+    .section-registrarse{
+        border-radius: 40px 0px 40px 0px;
+        background-color: #db9e42;
+        box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.500);
+        width: 45%;
+        margin: 30px
+    }
+
+    .boton-pag-turno .bn632-hover{
+        width: 90px;
+        font-size: 17px;
+        height: 40px;
+    }
+   
+    .boton-pag-regi .bn632-hover{
+        width: 50%;
+        font-size: 16px;
+        font-weight: 600;
+    }
+       
+        
     .form-misdatos h4 {
         font-size: 50px;
         margin-bottom: 20px;
@@ -833,7 +918,7 @@ footer {
         width: 200px;
       }
     .texto-label{
-        font-size: 14px;
+        font-size: 16px;
         margin-bottom: 0px;
     }
 
@@ -926,6 +1011,11 @@ footer {
 }
 
 @media(max-width: 767px) {
+
+    .login-box{
+        border-radius: 40px 0px 40px 0px;
+        width: 370px;
+    }
   
     .cabecera {
         /*Posiciona los botones de login y registrase en el menu princial aarriba y a la derecha*/
@@ -993,9 +1083,6 @@ footer {
     .imagen-formulario-login{
         display: none;
     }
-   
-
- 
 }
 
 @media(max-width: 576px) {

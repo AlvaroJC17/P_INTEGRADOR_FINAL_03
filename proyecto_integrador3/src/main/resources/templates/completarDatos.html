@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
         <link rel="stylesheet" href="./css/styles.css">
-        <title>Registrarse</title>
+        <title>completarDatos</title>
       </head>
 <body class="">
     
@@ -54,7 +54,7 @@
 
     <main class="main-registrarse-2">
       <div class="d-flex justify-content-center  align-items-center div-registrarse">
-    <section class=" section-registrarse">
+    <section class=" section-completar-datos">
       <div class="row  ">
         <div class="img-registrarse col-md-4 d-flex justify-content-center align-items-center"> </div>
 
@@ -62,41 +62,72 @@
           <div class="logo-registrarse text-center  ">
             <img class="img-logo-final-home" src="./imagenes/Nani-removebg-preview.png" alt="">
           </div>
-          <form action="action">
-            <p class="ps-0 fs-1 ">Registrarse</p>
-
-              <div class="mb-3">
-                
-              <label for="email" class="form-label texto-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Email">
-               
-              <label for="contraseña" class="form-label texto-label">Contraseña</label>
-              <input type="number" class="form-control" id="contarseña" placeholder="Contraseña">
-
-              <label for="contraseña2" class="form-label texto-label">Repetir contraseña</label>
-              <input type="number" class="form-control" id="contarseña2" placeholder="Repetir contraseña">
-
+          <form>
+            <p class="ps-3 fs-1 ">Completar Datos</p>
+              <div class="mb-3 row">
+                <div class="col-md-6">
+                <label for="nombre" class="form-label texto-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+              </div>
+              <div class="col-md-6">
+                <label for="apellido" class="form-label texto-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+              </div>
             </div>
-
-            <div class="boton-de-registro text-center boton-pag-regi ">
-                <a href="#"><button class="bn632-hover bn26">Enviar</button></a>
-              </div>
-              <div class="text-center fs-5 ">
-                <a class="m-2 " href="./login.html">¿Ya esta registrado?</a>
-              </div>
-              <div class="text-center fs-5  mt-2 ">
-                <a class="m-2 " href="">¿Olvido su contraseña?</a>
-              </div>
-              
-            </form>
+            <div class="mb-3 row">
+              <div class="col-md-6">
+                <label for="numero-doc" class="form-label texto-label">N° Documento</label>
+                <input type="text" class="form-control" id="numero-doc" placeholder="N° de documento">
+            </div>
+            <div class="col-md-6">
+              <label for="sexo" class="form-label texto-label">Sexo</label>
+              <select id="sexo" class="form-select" aria-label="Default select example">
+              <option selected>Seleccione</option>
+              <option value="1">Femenino</option>
+              <option value="2">Masculino</option>
+              <option value="3">Otro</option>
+            </select>
+          </div>
         </div>
-    </div>
+
+          <div class="mb-3 row">
+            <div class="col-md-6">
+              <label for="edad" class="form-label texto-label">Edad</label>
+              <input type="number" class="form-control" id="edad" placeholder="Edad">
+          </div>
+          <div class="col-md-6">
+            
+              <label for="telefono" class="form-label texto-label">Telefono</label>
+              <input type="number" class="form-control" id="telefono" placeholder="Telefono">
+          
+        </div>
+      </div>
+        <div class="mb-3 row">
+            <div class="col-md-6">
+              <label for="direccion" class="form-label texto-label">Direccion</label>
+              <input type="text" class="form-control" id="direccion" placeholder="Direccion">
+            </div>  
+            <div class="col-md-6">
+              <label for="nacimiento" class="form-label texto-label">Fecha nacimiento</label>
+              <input type="date" class="form-control" id="nacimiento" placeholder="Fecha de nacimiento">
+            </div>
+          </div>
+          <div class="boton-de-registro text-center ">
+            <a class="" href="./registrarse2.html"><button class="bn632-hover bn26">Enviar</button></a>
+          </div>
+          <div class="text-center fs-5 ">
+            <a class="m-2 " href="./login.html">¿Ya esta registrado?</a>
+          </div>
+          <div class="text-center fs-5  mt-2 ">
+            <a class="m-2 " href="">¿Olvido su contraseña?</a>
+          </div>
+   </form>
+
+</div>
+</div>
 </section>
 </div>   
 </main>
-
-           
-
 
 
   
